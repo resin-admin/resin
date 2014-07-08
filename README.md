@@ -1,13 +1,21 @@
-Resin
-===========
+# Resin
 
-## Getting Started
+## Development
 
-To run Resin locally you'll first need to install the following:
+Resin development depends on the following packages
 
 1. (Node)[http://nodejs.org/]
 1. (NPM)[https://www.npmjs.org/]
 1. (Gulp)[http://gulpjs.com/]
 1. (Bower)[http://bower.io/]
 
-To start Resin simply navigate to the project's root directory and run `node server.js`. To compile and watch your assets, navigate to the project's root directory and run `gulp`. Enjoy!
+
+```
+git clone https://github.com/resin-admin/resin.git
+cd resin
+npm install       # install dependencies
+gulp              # compiles and watches sources
+node ./server.js  # in a second terminal window
+```
+
+Enjoy!

@@ -1,17 +1,15 @@
 {
-  "name": "Varnish",
+  "name": "Resin",
   "version": "0.0.1",
-  "description": "TWG front-end CMS admin template.",
+  "description": "Admin CSS foundation and HTML templates",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.js"
   },
+  "repository": "https://github.com/resin-admin/resin.git",
   "keywords": [
     "CMS",
-    "admin",
-    "TWG",
-    "Working",
-    "Group"
+    "admin"
   ],
   "author": "Mark Appleby",
   "license": "ISC",
