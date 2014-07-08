@@ -4,10 +4,10 @@
 
 Resin development depends on the following packages
 
-1. (Node)[http://nodejs.org/]
-1. (NPM)[https://www.npmjs.org/]
-1. (Gulp)[http://gulpjs.com/]
-1. (Bower)[http://bower.io/]
+1. [Node](http://nodejs.org/)
+1. [NPM](https://www.npmjs.org/)
+1. [Gulp](http://gulpjs.com/)
+1. [Bower](http://bower.io/)
 
 
 ```
