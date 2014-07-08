@@ -1,0 +1,96 @@
+.site-primary-nav
+  color white
+  width 100px
+  text-align center
+  background primaryColor
+  a
+    text-decoration none
+    position relative
+    color textColor
+    display block
+    &:before
+      transform scale(0)
+      animation scaleIn 0.3s bounce
+      animation-fill-mode forwards
+      transition all 0.2s bounce
+      opacity 0.5
+      display block
+      font-size 32px
+      padding 20px 10px
+
+    &:nth-child(2):before
+      animation-delay 0.0s
+    &:nth-child(3):before
+      animation-delay 0.1s
+    &:nth-child(4):before
+      animation-delay 0.2s
+    &:nth-child(5):before
+      animation-delay 0.3s
+    &:nth-child(6):before
+      animation-delay 0.4s
+    &:nth-child(7):before
+      animation-delay 0.5s
+    &:nth-child(8):before
+      animation-delay 0.6s
+
+    &.active:before, &:hover:before
+      transform scale(1.1)
+      opacity 1
+
+    &.active:after
+      content ''
+      display block
+      border-left 10px solid primaryColor
+      border-top 10px solid transparent
+      border-bottom 10px solid transparent
+      position absolute
+      left 100%
+      top 50%
+      margin-top -10px
+      z-index 1
+  span
+    transition all 0.2s bounce
+    position absolute
+    left 100%
+    top 50%
+    margin-top -16px
+    margin-left -30px 
+    background primaryColor
+    background white
+    color primaryColor
+    padding 10px 0
+    border 1px solid #eee
+    border-left-width 0
+    border-right-width 0
+    max-width 0
+    overflow hidden
+    opacity 0
+    z-index 2
+    font-weight bold
+    box-shadow 0 0 0 rgba(black, 0)
+    &:before
+      content ''
+      display block
+      width 0
+      height 0
+      border-right 10px solid white 
+      border-top 10px solid transparent
+      border-bottom 10px solid transparent
+      position absolute
+      right 100%
+      top 50%
+      margin-top -10px
+      z-index 1
+  a:hover span
+    box-shadow -3px 4px 2px rgba(black, 0.2)
+    margin-left -15px
+    opacity 1
+    max-width 400px
+    padding 10px 15px
+    border-left-width 1px
+    border-right-width 1px 
+    overflow visible
+  a.active 
+    cursor default
+    span
+      display none

@@ -1,0 +1,50 @@
+.site-secondary-nav
+  background #eee
+  width 200px
+  padding 25px
+  a
+    transition all 0.1s ease-in-out
+    display block
+    text-decoration none
+    padding 10px 0
+    color #aaa
+    font-size 14px
+    &.active, &:hover
+      color primaryColor
+    &.active
+      position relative
+      font-weight bold
+      cursor default
+      &:after
+        content ''
+        display block
+        position absolute
+        left 100%
+        top 50%
+        border-left 10px solid #eee
+        border-top 10px solid transparent
+        border-bottom 10px solid transparent
+        width 0
+        height 0
+        margin-left 25px
+        margin-top -10px
+    &:hover .fa
+      transform scale(1.2)
+      margin-right 10px
+    &.active:hover .fa
+      transform scale(1)
+      margin-right 8px
+  .fa
+    transition all 0.1s ease-in-out
+    font-size 20px
+    margin-right 8px
+    vertical-align middle
+  .nav-group
+    border-bottom 1px solid #ccc
+    margin-bottom 8px
+    padding-bottom 8px
+    &last-child
+      border-bottom 0
+      padding-bottom 0
+  .nav-title
+    margin-bottom 5px
