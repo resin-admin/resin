@@ -1,0 +1,6 @@
+{
+  "name": "Resin",
+  "dependencies": {
+    "guidedog": "master"
+  }
+}

@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     minify = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
     order = require('gulp-order'),
+    jade = require('gulp-jade'),
     concat = require('gulp-concat');
 
 // Concatenate & Minify Stylus
@@ -29,11 +30,19 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
+// Convert Jade to HTML
+gulp.task('jade', function() {
+  return gulp.src('./*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('./'));
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
+  gulp.watch('./*.jade', ['jade']);
   gulp.watch('./assets/js/**/*.js', ['js']);
   gulp.watch('./assets/styl/**/*.styl', ['styl']);
 });
 
 // Default Task
-gulp.task('default', ['styl', 'js', 'watch']);
+gulp.task('default', ['styl', 'js', 'jade', 'watch']);

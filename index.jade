@@ -1,0 +1,139 @@
+doctype html 
+html
+  head
+    link(href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Lato:400,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', src='http://normalize-css.googlecode.com/svn/trunk/normalize.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js')
+    link(href='dist/css/admin.css', rel='stylesheet')
+    script(src='dist/js/admin.min.js', type='text/javascript')
+  body
+    .site-wrapper
+      nav.site-primary-nav
+        img.logo(src='assets/img/logo.jpg', alt='')
+        a.fa.fa-home.active(href='#')
+          span Dashboard
+        a.fa.fa-file-o(href='#')
+          span Pages
+        a.fa.fa-paperclip(href='#')
+          span Collections
+        a.fa.fa-bar-chart-o(href='#')
+          span Reports
+        a.fa.fa-gear(href='#')
+          span Admin
+        a.fa.fa-question-circle(href='#')
+          span Help
+        a.fa.fa-user(href='#')
+          span Account
+      nav.site-secondary-nav
+        h3.nav-title  Dashboard 
+        .nav-group
+          a(href='#')
+            i.fa.fa-home
+            | Overview
+        .nav-group
+          a(href='#')
+            i.fa.fa-file-word-o
+            | New Article
+          a(href='#')
+            i.fa.fa-edit
+            | New Blog Post
+          a(href='#')
+            i.fa.fa-file-o
+            | New Page
+          a.active(href='#')
+            i.fa.fa-navicon
+            | New Menu
+          a(href='#')
+            i.fa.fa-gift
+            | New Product
+          a(href='#')
+            i.fa.fa-code
+            | New Snippet
+          a(href='#')
+            i.fa.fa-calendar
+            | New Event
+          a(href='#')
+            i.fa.fa-globe
+            | New Place
+      .site-body
+        header.site-header
+          h1 Overview
+        section.site-section
+          h2 Outstanding Tasks
+          .grid
+            .grid__item.one-third
+              .card
+                .card-alert 52
+                p
+                  strong 52
+                  | user's comments are pending approval.
+                a.primary.button.wide(href='#') Approve Comments
+            .grid__item.one-third
+              .card
+                .card-alert 14
+                p
+                  strong 14
+                  | sections of copy are missing translation.
+                a.primary.button.wide(href='#') Add Translations
+        section.site-section
+          h2 Key Performance Indicators
+          .grid
+            .grid__item.one-third
+              .card
+                h4 User Sign-ups
+                .square
+                  canvas.chart(width='200', height='200')
+            .grid__item.one-third
+              .card
+                h4 Daily Page Views
+                .square
+                  canvas.chart(width='200', height='200')
+            .grid__item.one-third
+              .card
+                h4 Daily Revenue
+                .square
+                  canvas.chart(width='200', height='200')
+        section.site-section
+          h2 Blog Posts
+          table(cellspacing='0')
+            thead
+              tr
+                th Title
+                th Status
+                th Author
+                th Created
+                th Updated
+                th Actions
+            tbody
+              tr
+                td
+                  a(href='#') Our experience at Node conference
+                td Published
+                td
+                  a(href='#') Derek Watson
+                td 2 days ago
+                td 2 days ago
+                td
+                  a(href='#') edit
+              tr
+                td
+                  a(href='#') Our experience at Node conference
+                td Published
+                td
+                  a(href='#') Derek Watson
+                td 2 days ago
+                td 2 days ago
+                td
+                  a(href='#') edit
+              tr
+                td
+                  a(href='#') Our experience at Node conference
+                td Published
+                td
+                  a(href='#') Derek Watson
+                td 2 days ago
+                td 2 days ago
+                td
+                  a(href='#') edit
