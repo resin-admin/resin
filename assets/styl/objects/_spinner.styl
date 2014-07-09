@@ -4,26 +4,38 @@
  */
 
 .spinner
-  padding: 30px
-  display: inline-block
-  border-radius: radius
-  margin: 0 auto
+  padding 30px
+  display inline-block
+  border-radius radius
+  margin 0 auto
   background primaryColor
   &:before
-    content: ''
-    display: block
-    width: 60px
-    height: 60px
-    margin: auto
-    background-color: textColor
-    animation: rotateplane 1.2s infinite ease-in-out
+    content ''
+    display block
+    width 60px
+    height 60px
+    margin auto
+    background-color textColor
+    animation rotateplane 1.2s infinite ease-in-out
+    border-radius radius
   &:after
-    margin-top: 20px
-    font-size: 14px
+    margin 20px auto 0 auto
+    font-size 14px
     color textColor
-    content: 'loading...'
-    display: block
-    text-align: center
+    content 'loading...'
+    display block
+    text-align center
+    overflow hidden
+    width 49px
+    animation ellipses 1s infinite linear
+
+@keyframes ellipses
+  0%, 32%
+    width: 49px
+  33%, 65%
+    width: 51px
+  65%, 100%
+    width: 54px
 
 @keyframes rotateplane 
   0%  
