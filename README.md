@@ -14,6 +14,7 @@ Resin development depends on the following packages
 git clone https://github.com/resin-admin/resin.git
 cd resin
 npm install       # install dependencies
+bower install     # install front-end dependencies
 gulp              # compiles and watches sources
 node ./server.js  # in a second terminal window
 ```
