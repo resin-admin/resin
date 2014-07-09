@@ -8,6 +8,7 @@ html
     script(src='dist/js/resin.min.js', type='text/javascript')
   body
     .site-wrapper
+
       nav.site-primary-nav
         img.logo(src='assets/img/logo.jpg', alt='')
         a.fa.fa-home.active(href='#')
@@ -24,7 +25,8 @@ html
           span Help
         a.fa.fa-user(href='#')
           span Account
-      nav.site-secondary-nav
+
+      nav.site-secondary-nav.animated.fadeInLeft
         h3.nav-title  Dashboard 
         .nav-group
           a(href='#')
@@ -55,6 +57,7 @@ html
           a(href='#')
             i.fa.fa-globe
             | New Place
+
       .site-body
         header.page-header
           h1 Overview
@@ -135,3 +138,6 @@ html
                 td 2 days ago
                 td
                   a(href='#') edit
+
+    .site-overlay
+      .spinner

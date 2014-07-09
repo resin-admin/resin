@@ -1,0 +1,33 @@
+/*!!!
+ * section: Spinner
+ * example: <div class="spinner"></div>
+ */
+.spinner
+  border: 1px solid greyColor 
+  padding: 10px
+  display: inline-block
+  border-radius: radius
+  margin: 0 auto
+  &:before
+    content: ''
+    display: block
+    width: 30px
+    margin: auto
+    height: 30px
+    background-color: primaryColor
+    animation: rotateplane 1.2s infinite ease-in-out
+  &:after
+    margin-top: 5px
+    font-size: 10px
+    color greyColor
+    content: 'loading'
+    display: block
+    text-align: center
+
+@keyframes rotateplane 
+  0%  
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  50%  
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  100%  
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)

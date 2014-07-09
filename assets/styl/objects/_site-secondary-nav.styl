@@ -1,12 +1,13 @@
 .site-secondary-nav
   position fixed
-  left primaryNavWidth 
-  width secondaryNavWidth
+  left 0 
+  width secondaryNavWidth + primaryNavWidth
   top 0
   height 100%
   z-index 2
   background #eee
   padding 25px
+  padding-left primaryNavWidth + 25px
   a
     transition all 0.1s ease-in-out
     display block
@@ -45,7 +46,7 @@
     margin-right 8px
     vertical-align middle
   .nav-group
-    border-bottom 1px solid #ccc
+    border-bottom 1px solid greyColor 
     margin-bottom 8px
     padding-bottom 8px
     &:last-child
