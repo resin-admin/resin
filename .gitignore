@@ -1,2 +1,5 @@
 **/.DS_Store
 .dist
+dist/css/vendor.css
+dist/js/vendor.min.js
+vendor/
