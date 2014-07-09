@@ -1,30 +1,28 @@
+/*!!!
+ * section: Link
+ * example: <a href="#" class="link">Link</a>
+ */
+
 a
   color primaryColor
 
-.site-body a:not([class])
+.site-body a:not([class]), .link
   position: relative
   text-decoration none
-  overflow hidden
-  transition all 0.1s ease-in-out
-  &:after
-    transition all 0.1s ease-in-out
+  &:before, &:after
     content ''
     position absolute
     bottom -2px 
     left 0
-    height 1px
+    height 2px
     width 100% 
     background primaryColor
     z-index -1
-    opacity 0.3
-  &:hover 
-    color textColor
+    opacity 0.2
+  &:after
+    opacity 1
+    transform scaleX(0)
+    transition all 0.2s ease-in-out
+  &:hover
     &:after
-      height 16px
-      bottom 0
-      animation-duration: 0.4s 
-      animation-name: strobe
-      animation-iteration-count: infinite
-      animation-direction: alternate 
-      animation-timing-function: ease-in-out
-      transform scaleX(1.05) scaleY(1.1)
+      transform scaleX(1)
