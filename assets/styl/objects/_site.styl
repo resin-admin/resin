@@ -19,16 +19,31 @@ h1, h2, h3, h4, h5, h6
 p
   margin-top 0
 
-.site-wrapper
-  display table
-  width 100%
+.site-primary-nav
+  position fixed
+  top 0
+  left 0
   height 100%
+  z-index 3
+  width primaryNavWidth
 
-.site-primary-nav,
-.site-secondary-nav,
+.site-secondary-nav
+  position fixed
+  left primaryNavWidth 
+  width secondaryNavWidth
+  top 0
+  height 100%
+  z-index 2
+
 .site-body
-  display table-cell
-  vertical-align top
+  position fixed
+  top 0
+  left 0
+  height 100%
+  width 100%
+  padding-left secondaryNavWidth + primaryNavWidth + 25 !important
+  z-index 1
+  overflow-y auto
 
 .site-section
   margin-bottom 50px
