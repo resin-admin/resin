@@ -2,25 +2,26 @@
  * section: Spinner
  * example: <div class="spinner"></div>
  */
+
 .spinner
-  border: 1px solid greyColor 
-  padding: 10px
+  padding: 30px
   display: inline-block
   border-radius: radius
   margin: 0 auto
+  background primaryColor
   &:before
     content: ''
     display: block
-    width: 30px
+    width: 60px
+    height: 60px
     margin: auto
-    height: 30px
-    background-color: primaryColor
+    background-color: textColor
     animation: rotateplane 1.2s infinite ease-in-out
   &:after
-    margin-top: 5px
-    font-size: 10px
-    color greyColor
-    content: 'loading'
+    margin-top: 20px
+    font-size: 14px
+    color textColor
+    content: 'loading...'
     display: block
     text-align: center
 

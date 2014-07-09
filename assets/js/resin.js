@@ -19,6 +19,10 @@ $(document).ready(function(){
     var chart = new Chart(ctx).Bar(data, {});
   });
 
+  $('body').on('click', function(){
+    $('.site-overlay').toggleClass('active')
+  });
+
 });
 
 // http://stackoverflow.com/a/13542669/918060

@@ -1,0 +1,24 @@
+.site-overlay
+  position absolute
+  top 0
+  left 0
+  bottom 0 
+  right 0
+  z-index 999
+  background rgba(white, 0.95)
+  transition all 0.2s ease-out
+  overflow hidden
+  transform scaleX(0)
+  opacity 0
+  > *
+    position absolute
+    left 50%
+    top 50%
+    transform translateY(-50%) translateX(-50%) scale(0)
+    transition all 0.2s bounce
+    transition-delay 0.3s
+  &.active
+    opacity 1
+    transform scaleX(1)
+    > *
+      transform translateY(-50%) translateX(-50%) scale(1)
