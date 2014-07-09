@@ -1,7 +1,20 @@
 .site-primary-nav
+  position fixed
+  top 0
+  left 0
+  height 100%
+  z-index 3
+  width primaryNavWidth
   color white
   text-align center
   background primaryColor
+
+  .logo
+    max-width 80px
+    margin-top 10px
+    border-radius radius
+    border-bottom 2px solid darken(primaryColor, 10)
+
   a
     text-decoration none
     position relative
