@@ -1,6 +1,5 @@
-var Chart
 $(document).ready(function(){
-  //Chart.defaults.global.responsive = true;
+  Chart.defaults.global.responsive = true;
   var chartColor = $('.site-primary-nav').css('background-color');
   chartColor = shadeRGBColor(chartColor, 0.6)
 
@@ -12,8 +11,7 @@ $(document).ready(function(){
         strokeColor: chartColor,
         data: [65, 59, 80, 81, 56, 55, 40]
       }
-    ],
-    responsive: true
+    ]
   };
 
   $('.chart').each(function(){
