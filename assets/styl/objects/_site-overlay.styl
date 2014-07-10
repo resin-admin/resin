@@ -10,15 +10,19 @@
   overflow hidden
   transform scaleX(0)
   opacity 0
+  transition-delay 0.2s
   > *
     position absolute
     left 50%
     top 50%
     transform translateY(-50%) translateX(-50%) scale(0)
     transition all 0.2s bounce
-    transition-delay 0.3s
+    opacity 0
   &.active
+    transition-delay 0s
     opacity 1
     transform scaleX(1)
     > *
       transform translateY(-50%) translateX(-50%) scale(1)
+      transition-delay 0.3s
+      opacity 1
