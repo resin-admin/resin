@@ -60,6 +60,19 @@ html
 
       .site-body
         header.page-header
+          h1 Form Examples
+
+        .grid
+          .grid__item.one-half
+            .form-group
+              label(for='firstName') First Name
+              input(type='text', id='firstName', placeholder='John')
+          .grid__item.one-half
+            .form-group
+              label(for='lastName') Last Name
+              input(type='text', id='lastName', placeholder='Doe')
+
+        header.page-header
           h1 Overview
         section.page-section
           h2 Outstanding Tasks

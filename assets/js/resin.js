@@ -20,7 +20,7 @@ $(document).ready(function(){
   });
 
   $('body').on('click', function(){
-    $('.site-overlay').toggleClass('active')
+    //$('.site-overlay').toggleClass('active')
   });
 
 });
