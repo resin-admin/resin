@@ -86,12 +86,20 @@ html
                 input(type='text', id='email', placeholder='jane@gmail.com')
                 label(for='email') Email Address
 
+            .grid__item.one-half
+              .form-group.small
+                select(id='size')
+                  option Select a size
+                  option Large
+                  option Medium
+                  option Small
+                label(for='size') Size
+
           .grid
             .grid__item.one-half
               .form-group.small
                 textarea(id='description')
                 label(for='description') Description
-
 
         header.page-header
           h1 Overview
