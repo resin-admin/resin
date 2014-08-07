@@ -1,39 +1,32 @@
+inputFields = "input[type='text'], input[type='password'], textarea, select"
+
 .form-group
   display: block
   margin-bottom: 25px
   position: relative
   padding-top: 13px
   &.large
-    input[type='text'],
-    input[type='password'],
-    textarea,
-    select
+    {inputFields}
       font-size: 3em
-  input[type='text'],
-  input[type='password'],
-  textarea,
-  select
+  {inputFields}
     font-size: 2em
   &.small
     padding-top: 15px
-    input[type='text'],
-    input[type='password'],
-    textarea,
-    select
+    {inputFields}
       font-size: 1.3em
   &.error
     label
       color: alertColor !important
-    input[type='text'],
-    input[type='password'],
-    textarea,
-    select
+    {inputFields}
       color: alertColor
       border-bottom-color: alertColor
+      border-bottom-width: 2px
 
 .form-error
   color: alertColor
   margin-top: 2px
+  font-size: 12px
+  font-weight: bold
 
 label
   font-size: 12px 
@@ -43,10 +36,7 @@ label
   left: 0
   transition: color 0.2s ease-in-out
 
-input[type='text'],
-input[type='password'],
-textarea,
-select
+{inputFields}
   display: block
   width: 100%
   border: 0
