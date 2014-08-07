@@ -62,15 +62,22 @@ html
         header.page-header
           h1 Form Examples
 
-        .grid
-          .grid__item.one-half
-            .form-group
-              label(for='firstName') First Name
-              input(type='text', id='firstName', placeholder='John')
-          .grid__item.one-half
-            .form-group
-              label(for='lastName') Last Name
-              input(type='text', id='lastName', placeholder='Doe')
+        section.page-section
+          .grid
+            .grid__item.one-half
+              .form-group
+                input(type='text', id='firstName' required='')
+                label(for='firstName') First Name
+
+            .grid__item.one-half
+              .form-group
+                input(type='text', id='lastName' required='')
+                label(for='lastName') Last Name
+
+            .grid__item.one-half
+              .form-group
+                input(type='text', id='email' required='')
+                label(for='email') Email Address
 
         header.page-header
           h1 Overview

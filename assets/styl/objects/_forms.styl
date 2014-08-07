@@ -1,13 +1,17 @@
 .form-group
   display: block
   margin-bottom: 20px
+  position: relative
+  border-bottom: 1px solid greyColor
 
 label
-  color: primaryColor
-  width: 100%
-  display: block
-  text-transform: uppercase
-  font-size: 10px
+  font-size: 2em
+  position: absolute
+  top: 10px 
+  left: 0
+  color: greyColor
+  transition: all 0.1s ease-in-out
+  cursor: text
 
 input[type='text'],
 input[type='password']
@@ -16,9 +20,21 @@ input[type='password']
   width: 100%
   border: 0
   outline: none
+  padding-top: 10px
+  &:valid, &:focus
+    + label
+      font-size: 12px
+      top: 0
+      cursor: default
+  &:valid
+    + label
+      color: greyColor
+  &:focus
+    + label
+      color: primaryColor
 
 ::-webkit-input-placeholder
-  color: greyColor 
+  color: greyColor
 
 :-moz-placeholder
   color: greyColor 
