@@ -1,17 +1,59 @@
+@keyframes floatLabelUp
+  0%
+    font-size: 2em
+    top: 15px
+    color: lightGreyColor
+  49%
+    opacity: 0
+    font-size: 2em
+    color: lightGreyColor
+  50%
+    font-size: 12px
+    top: 15px
+    opacity: 0
+    color: greyColor
+  100%
+    font-size: 12px
+    top: 0
+    opacity: 1
+    color: greyColor
+
+@keyframes floatLabelDown
+  0%
+    font-size: 12px  
+    top: 0 
+    opacity: 1
+    color: greyColor
+  49%
+    font-size: 12px
+    top: 15px
+    opacity: 0
+    color: greyColor
+  50%
+    top: 15px
+    font-size: 2em
+    opacity: 0
+    color: lightGreyColor
+  100%
+    opacity: 1
+    top: 15px
+    font-size: 2em
+    color: lightGreyColor
+
 .form-group
   display: block
   margin-bottom: 20px
   position: relative
-  border-bottom: 1px solid greyColor
 
 label
   font-size: 2em
   position: absolute
-  top: 10px 
+  top: 15px 
   left: 0
-  color: greyColor
-  transition: all 0.1s ease-in-out
+  color: lightGreyColor
   cursor: text
+  animation: floatLabelDown 0.2s ease-in-out
+  animation-fill-mode: forwards
 
 input[type='text'],
 input[type='password']
@@ -20,27 +62,40 @@ input[type='password']
   width: 100%
   border: 0
   outline: none
-  padding-top: 10px
+  padding-top: 15px
+  border-bottom: 1px solid greyColor
+  transition border-bottom-color 0.2s ease-in-out
   &:valid, &:focus
     + label
-      font-size: 12px
-      top: 0
-      cursor: default
-  &:valid
-    + label
-      color: greyColor
+      animation: floatLabelUp 0.2s ease-in-out
+      animation-fill-mode: forwards
   &:focus
-    + label
-      color: primaryColor
+    border-bottom-color: primaryColor
 
 ::-webkit-input-placeholder
-  color: greyColor
+  color: transparent
+  transition: color 0.2s ease-in-out
 
 :-moz-placeholder
-  color: greyColor 
+  color: transparent 
+  transition: color 0.2s ease-in-out
 
 ::-moz-placeholder
-  color: greyColor
+  color: transparent
+  transition: color 0.2s ease-in-out
 
 :-ms-input-placeholder
-  color: greyColor
+  color: transparent
+  transition: color 0.2s ease-in-out
+
+input:focus::-webkit-input-placeholder
+  color: lightGreyColor
+
+input:focus:-moz-placeholder
+  color: lightGreyColor 
+
+input:focus::-moz-placeholder
+  color: lightGreyColor
+
+input:focus:-ms-input-placeholder
+  color: lightGreyColor
