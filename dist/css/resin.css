@@ -61,7 +61,7 @@
  *       </tr>
  *     </tbody>
  *   </table>
- */table{width:100%;text-align:left}table td,table th{padding:15px 5px;border-bottom:1px solid #eee}/*!!
+ */table{width:100%;text-align:left}table td,table th{padding:15px 5px;border-bottom:1px solid #eee}.tab-trigger{padding:0;margin:0;list-style-type:none;zoom:1}.tab-trigger:after,.tab-trigger:before{content:"";display:table}.tab-trigger:after{clear:both}.tab-trigger li{float:left;border:1px solid #ccc;background:#eee;padding:10px 25px;cursor:pointer}.tab-trigger li:first-child{border-top-left-radius:3px}.tab-trigger li:last-child{border-top-right-radius:3px}.tab-trigger li.active{background:#fff;cursor:default;border-bottom-color:#fff}.tab-content{padding:0;margin:-1px 0 0;list-style-type:none}.tab-content li{display:none;border:1px solid #ccc;padding:25px;border-radius:0 3px 3px}.tab-content li.active{display:block}/*!!
  * title: Wide
  * section: Helpers
  * description: Ensure element spans fully across its available width

@@ -60,8 +60,19 @@ html
 
       .site-body
         header.page-header
-          h1 Form Examples
+          h1 Tabbing
+        section.page-section
+          ul.tab-trigger
+            li.active Tab One
+            li Tab Two
+            li Tab Three
+          ul.tab-content
+            li.active content one
+            li content two
+            li content three
 
+        header.page-header
+          h1 Form Examples
         section.page-section
           fieldset
             .grid
@@ -81,7 +92,6 @@ html
                   label(for='lastName') Last Name
                   .form-error
                     | This field is required
-
           fieldset
             .grid
               .grid__item.one-half
@@ -97,7 +107,6 @@ html
                     option Medium
                     option Small
                   label(for='size') Size
-
             .grid
               .grid__item.one-half
                 .form-group.small

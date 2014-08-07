@@ -1,0 +1,33 @@
+.tab-trigger
+  padding: 0
+  margin: 0
+  list-style-type: none
+  clearfix()
+  li
+    float: left
+    border: 1px solid greyColor
+    background: lightGreyColor
+    padding: 10px 25px
+    cursor: pointer
+    &:first-child
+      border-top-left-radius: radius
+    &:last-child
+      border-top-right-radius: radius
+    &.active
+      background: white
+      cursor: default
+      border-bottom-color: white
+
+.tab-content
+  padding: 0
+  margin: 0
+  list-style-type: none
+  margin-top: -1px
+  li
+    display: none
+    border: 1px solid greyColor
+    padding: 25px
+    border-radius: radius
+    border-top-left-radius: 0
+    &.active
+      display: block
