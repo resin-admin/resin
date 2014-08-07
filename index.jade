@@ -75,9 +75,11 @@ html
                 label(for='firstName') First Name
 
             .grid__item.one-half
-              .form-group
+              .form-group.error
                 input(type='text', id='lastName', placeholder='Smith')
                 label(for='lastName') Last Name
+                .form-error
+                  | This field is required
 
             .grid__item.one-half
               .form-group.small

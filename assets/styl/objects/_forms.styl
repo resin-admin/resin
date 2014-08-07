@@ -13,10 +13,23 @@
   textarea
     font-size: 2em
   &.small
+    padding-top: 15px
     input[type='text'],
     input[type='password'],
     textarea
       font-size: 1.3em
+  &.error
+    label
+      color: alertColor !important
+    input[type='text'],
+    input[type='password'],
+    textarea
+      color: alertColor
+      border-bottom-color: alertColor
+
+.form-error
+  color: alertColor
+  margin-top: 2px
 
 label
   font-size: 12px 
