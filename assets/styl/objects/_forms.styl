@@ -1,7 +1,22 @@
 .form-group
   display: block
-  margin-bottom: 20px
+  margin-bottom: 25px
   position: relative
+  padding-top: 13px
+  &.large
+    input[type='text'],
+    input[type='password'],
+    textarea
+      font-size: 3em
+  input[type='text'],
+  input[type='password'],
+  textarea
+    font-size: 2em
+  &.small
+    input[type='text'],
+    input[type='password'],
+    textarea
+      font-size: 1.3em
 
 label
   font-size: 12px 
@@ -12,15 +27,15 @@ label
   transition: color 0.2s ease-in-out
 
 input[type='text'],
-input[type='password']
+input[type='password'],
+textarea
   display: block
-  font-size: 2em
   width: 100%
   border: 0
   outline: none
   border-bottom: 1px solid greyColor
   transition border-bottom-color 0.2s ease-in-out
-  padding-top: 15px
+  resize: none
   &:focus
     border-bottom-color: primaryColor
     + label

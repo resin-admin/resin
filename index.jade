@@ -64,20 +64,32 @@ html
 
         section.page-section
           .grid
-            .grid__item.one-half
-              .form-group
+            .grid__item.one-whole
+              .form-group.large
                 input(type='text', id='shortTitle', placeholder='Short product title (about 15 words)')
                 label(for='shortTitle') Short Title
 
             .grid__item.one-half
               .form-group
-                input(type='text', id='lastName')
-                label(for='lastName') Last Name
+                input(type='text', id='firstName', placeholder='Jane')
+                label(for='firstName') First Name
 
             .grid__item.one-half
               .form-group
+                input(type='text', id='lastName', placeholder='Smith')
+                label(for='lastName') Last Name
+
+            .grid__item.one-half
+              .form-group.small
                 input(type='text', id='email', placeholder='jane@gmail.com')
                 label(for='email') Email Address
+
+          .grid
+            .grid__item.one-half
+              .form-group.small
+                textarea(id='description')
+                label(for='description') Description
+
 
         header.page-header
           h1 Overview

@@ -23,6 +23,11 @@ $(document).ready(function(){
     //$('.site-overlay').toggleClass('active')
   });
 
+  // jquery-autosize plugin
+  $('textarea').autosize({
+    'append': ''
+  });   
+
 });
 
 // http://stackoverflow.com/a/13542669/918060

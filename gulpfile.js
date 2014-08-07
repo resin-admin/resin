@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 
 //-- Bower Dependencies -----------------------------------------------------
 var bowerJsDependencies = [
+  './vendor/jquery-autosize/jquery.autosize.js',
   './vendor/jquery/dist/jquery.js',
   './vendor/chartjs/Chart.js'
 ];
