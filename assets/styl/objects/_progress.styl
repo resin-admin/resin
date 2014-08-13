@@ -1,0 +1,27 @@
+/*!!!
+ * section: Progress
+ * example: <progress value="75" max="100">75</progress>
+ */
+
+progress
+  display: block
+  width: 100%
+  background: none
+  height: 30px
+  -webkit-appearance: none
+
+progress::-webkit-progress-bar
+  background: white
+
+progress::-webkit-progress-value
+	background:
+		linear-gradient(-45deg, transparent, transparent 40%, primaryColor 40%, primaryColor 60%, transparent 60%),
+		linear-gradient(left, greyColor, greyColor)
+	background-size: 15px 30px
+	animation: move 5s linear 0 infinite
+
+@keyframes move
+  0% 
+    background-position: 0px -15px, 0 0, 0 0
+  100%
+    background-position: -100px -15px, 0 0, 0 0
