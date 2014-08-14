@@ -28,10 +28,37 @@ $(document).ready(function(){
     'append': ''
   });   
 
+  dropzoneStateToggle();
 });
 
 // http://stackoverflow.com/a/13542669/918060
 function shadeRGBColor(color, percent) {
   //var f=color.split(","),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=parseInt(f[0].slice(4)),G=parseInt(f[1]),B=parseInt(f[2]);
   //return "rgb("+(Math.round((t-R)*p)+R)+","+(Math.round((t-G)*p)+G)+","+(Math.round((t-B)*p)+B)+")";
+}
+
+function dropzoneStateToggle(){
+  $('body').on('click', '.dropzone', function(){
+    var target = $(this);
+    if(target.hasClass('uploading')){
+    }
+    else if(target.hasClass('hover')){
+      target.removeClass('hover');
+      target.addClass('uploading');
+      target.find('.dropzone-message').html('Uploading...');
+      var i = 0;
+      var animateProgress = window.setInterval(function(){
+        i++;
+        target.find('progress').attr('value', i);
+        if(i>=100){
+          clearInterval(animateProgress);
+          target.find('progress').addClass('striped');
+          target.find('.dropzone-message').html('Processing...');
+        }
+      }, 20);
+    }
+    else{
+      target.addClass('hover');
+    }
+  });
 }
