@@ -3,7 +3,8 @@
  * description: A general asset upload area. Supports either drag & drop or the more traditional upload button (and corresponding file system navigation).
  * example: |
  *   <div class="dropzone">
- *     Drag and drop your file here or <a href="#">browse</a>.
+ *     <div class="dropzone-icon"></div>
+ *     Drag and drop your file here or <a class="link" href="#">browse</a>.
  *   </div>
  */
 
@@ -12,3 +13,42 @@
   padding: 60px 30px
   border-radius: radius
   text-align: center
+  transition: all 0.2s ease-in-out
+  &:hover, .hover
+    background: rgba(black, 0.05)
+    .dropzone-icon 
+      &:before
+        transform: scale(1.4)
+      &:after
+        transform: scale(1.6)
+        bottom: 30px
+        opacity: 0
+ 
+.dropzone-icon
+  position: relative
+  height: 52px
+  display: inline-block
+  width: 100%
+  &:before, &:after
+    display: inline-block
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    left: 50%
+    position: absolute
+    margin-left: -12px
+    transition: all 0.2s ease-in-out
+  &:before
+    content: "\f0c2"
+    font-size: 52px
+    margin-left: -28px
+    bottom: 0
+  &:after
+    content: "\f062"
+    font-size: 24px
+    margin-left: -11px
+    bottom: 12px
+    color: white
