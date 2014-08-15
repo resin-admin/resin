@@ -3,8 +3,12 @@
  * example: <a href="#" class="button">Button</a>
  */.button{-webkit-transition:all .15s ease-in-out;transition:all .15s ease-in-out;-webkit-box-shadow:0 5px 5px rgba(0,0,0,.2);box-shadow:0 5px 5px rgba(0,0,0,.2);display:inline-block;padding:10px;text-decoration:none;background:#000;color:#fff;text-align:center;border-top:0 solid #fff;border-bottom:2px solid #000;opacity:.9;border-radius:3px}.button:hover{opacity:1;-webkit-box-shadow:0 5px 0 transparent;box-shadow:0 5px 0 transparent;border-top-width:2px;border-bottom-width:0}/*!!
  * section: Card
- * example: <div class="card">Card</div>
- */.card{border:1px solid #ccc;padding:20px;position:relative;border-radius:3px}/*!!
+ * example: |
+ *   <div class="cards">
+ *     <div class="card">Card</div>
+ *     <div class="card">Card</div>
+ *   </div>
+ */.card{border:1px solid #ccc;padding:20px;position:relative;border-radius:3px;margin-bottom:20px}.cards{margin-bottom:-20px}/*!!
  * title: Combo
  * section: Helpers
  * example: |
@@ -25,7 +29,7 @@
  *     <div class="dropzone-message">Drag and drop your file here or <a class="link" href="#">browse</a>.</div>
  *     <progress value="0" max="100"></progress>
  *   </div>
- */.dropzone{border:2px dashed #000;padding:60px 30px;border-radius:3px;text-align:center;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;/*!!
+ */.dropzone{border:2px dashed #000;padding:60px 30px;border-radius:3px;text-align:center;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;background-color:#fff;background-image:-webkit-linear-gradient(45deg,rgba(0,0,0,.015) 25%,transparent 25%,transparent 75%,rgba(0,0,0,.015) 75%),-webkit-linear-gradient(45deg,rgba(0,0,0,.015) 25%,transparent 25%,transparent 75%,rgba(0,0,0,.015) 75%);background-image:linear-gradient(45deg,rgba(0,0,0,.015) 25%,transparent 25%,transparent 75%,rgba(0,0,0,.015) 75%),linear-gradient(45deg,rgba(0,0,0,.015) 25%,transparent 25%,transparent 75%,rgba(0,0,0,.015) 75%);background-size:30px 30px;background-position:0 0,15px 15px;/*!!
    * section: Dropzone
    * title: Uploaded State
    * example: |
@@ -40,54 +44,64 @@
    *       </div>
    *     </div>
    *   </div>
-   */}.dropzone img{display:block}.dropzone progress{margin-top:10px;display:none}.dropzone.hover{background:rgba(0,0,0,.05)}.dropzone.hover .dropzone-icon:before{-webkit-transform:scale(1.4);-ms-transform:scale(1.4);transform:scale(1.4)}.dropzone.hover .dropzone-icon:after{-webkit-transform:scale(1.6);-ms-transform:scale(1.6);transform:scale(1.6);bottom:30px;opacity:0}.dropzone.uploading .dropzone-icon{opacity:0;height:0}.dropzone.uploading .dropzone-icon:before{-webkit-transform:scale(1.4);-ms-transform:scale(1.4);transform:scale(1.4)}.dropzone.uploading .dropzone-icon:after{-webkit-transform:scale(1.6);-ms-transform:scale(1.6);transform:scale(1.6);bottom:30px;opacity:0}.dropzone.uploading progress{display:block}.dropzone.uploaded{text-align:left;padding:15px;border-style:solid}.dropzone-icon{position:relative;height:52px;display:inline-block;width:100%;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.dropzone-icon:after,.dropzone-icon:before{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;left:50%;position:absolute;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.dropzone-icon:before{content:"\f0c2";font-size:52px;margin-left:-28px;bottom:0}.dropzone-icon:after{content:"\f062";font-size:24px;margin-left:-11px;bottom:12px;color:#fff}/*!!
+   */}.dropzone img{display:block}.dropzone progress{margin-top:10px;display:none}.dropzone.hover{background-color:rgba(0,0,0,.05)}.dropzone.hover .dropzone-icon:before{-webkit-transform:scale(1.4);-ms-transform:scale(1.4);transform:scale(1.4)}.dropzone.hover .dropzone-icon:after{-webkit-transform:scale(1.6);-ms-transform:scale(1.6);transform:scale(1.6);bottom:30px;opacity:0}.dropzone.uploading{background-color:transparent;background-image:none}.dropzone.uploading .dropzone-icon{opacity:0;height:0}.dropzone.uploading .dropzone-icon:before{-webkit-transform:scale(1.4);-ms-transform:scale(1.4);transform:scale(1.4)}.dropzone.uploading .dropzone-icon:after{-webkit-transform:scale(1.6);-ms-transform:scale(1.6);transform:scale(1.6);bottom:30px;opacity:0}.dropzone.uploading progress{display:block}.dropzone.uploaded{text-align:left;padding:15px;border-style:solid;background-color:transparent;background-image:none}.dropzone-icon{position:relative;height:52px;display:inline-block;width:100%;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.dropzone-icon:after,.dropzone-icon:before{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;left:50%;position:absolute;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.dropzone-icon:before{content:"\f0c2";font-size:52px;margin-left:-28px;bottom:0}.dropzone-icon:after{content:"\f062";font-size:24px;margin-left:-11px;bottom:12px;color:#fff}form{margin-bottom:-25px}/*!!
  * section: Forms
  * title: Fieldset
  * example: |
- *   <fieldset>
- *     <div class="form-group">
- *       <input id="address" type="text" placeholder="123 Sunshine St." />
- *       <label for="address">Address</label>
- *     </div>
- *     <div class="form-group">
- *       <input id="postal" type="text" placeholder="L4C 1B2" />
- *       <label for="postal">Postal Code</label>
- *     </div>
- *   </fieldset>
+ *   <form>
+ *     <fieldset>
+ *       <div class="form-group">
+ *         <input id="address" type="text" placeholder="123 Sunshine St." />
+ *         <label for="address">Address</label>
+ *       </div>
+ *       <div class="form-group">
+ *         <input id="postal" type="text" placeholder="L4C 1B2" />
+ *         <label for="postal">Postal Code</label>
+ *       </div>
+ *     </fieldset>
+ *   </form>
  */fieldset{border:0;border-left:3px solid #ccc;padding:25px 25px 0;margin-bottom:25px}/*!!
  * section: Forms
  * title: (Normal) Input Field
  * example: |
- *   <div class="form-group">
- *     <input id="firstName" type="text" placeholder="Susan" />
- *     <label for="firstName">First Name</label>
- *   </div>
+ *   <form>
+ *     <div class="form-group">
+ *       <input id="firstName" type="text" placeholder="Susan" />
+ *       <label for="firstName">First Name</label>
+ *     </div>
+ *   </form>
  */.form-group{display:block;margin-bottom:25px;position:relative;padding-top:13px;/*!!
    * section: Forms
    * title: Large Input Field
    * example: |
-   *   <div class="large form-group">
-   *     <input id="title" type="text" placeholder="The Lord of the Rings" />
-   *     <label for="title">Title</label>
-   *   </div>
+   *   <form>
+   *     <div class="large form-group">
+   *       <input id="title" type="text" placeholder="The Lord of the Rings" />
+   *       <label for="title">Title</label>
+   *     </div>
+   *   </form>
    *//*!!
    * section: Forms
    * title: Small Input Field
    * example: |
-   *   <div class="small form-group">
-   *     <input id="lastName" type="text" placeholder="Sanders" />
-   *     <label for="lastName">Last Name</label>
-   *   </div>
+   *   <form>
+   *     <div class="small form-group">
+   *       <input id="lastName" type="text" placeholder="Sanders" />
+   *       <label for="lastName">Last Name</label>
+   *     </div>
+   *   </form>
    *//*!!
    * section: Forms
    * title: Error
    * example: |
-   *   <div class="form-group error">
-   *     <input id="age" type="text" placeholder="34" />
-   *     <label for="age">Age</label>
-   *     <div class="form-error">This field is required</div>
-   *   </div>
-   */}.form-group.large input[type=password],.form-group.large input[type=text],.form-group.large select,.form-group.large textarea{font-size:3em}.form-group input[type=password],.form-group input[type=text],.form-group select,.form-group textarea{font-size:2em}.form-group.small{padding-top:15px}.form-group.small input[type=password],.form-group.small input[type=text],.form-group.small select,.form-group.small textarea{font-size:1.3em}.form-group.error label{color:#e30000!important}.form-group.error input[type=password],.form-group.error input[type=text],.form-group.error select,.form-group.error textarea{color:#e30000;border-bottom-color:#e30000;border-bottom-width:2px}.form-error{color:#e30000;margin-top:2px;font-size:12px;font-weight:700}label{font-size:12px;color:#ccc;position:absolute;top:0;left:0;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out}input[type=password],input[type=text],select,textarea{display:block;width:100%;border:0;outline:0;border-bottom:1px solid #ccc;-webkit-transition:border-bottom-color .2s ease-in-out;transition:border-bottom-color .2s ease-in-out;resize:none;background:0 0}input[type=password]:focus,input[type=text]:focus,select:focus,textarea:focus{border-bottom-color:#000;outline:0}input[type=password]:focus+label,input[type=text]:focus+label,select:focus+label,textarea:focus+label{color:#000}/*!!
+   *   <form>
+   *     <div class="form-group error">
+   *       <input id="age" type="text" placeholder="34" />
+   *       <label for="age">Age</label>
+   *       <div class="form-error">This field is required</div>
+   *     </div>
+   *   </form>
+   */}.form-group.large .form-cap,.form-group.large input[type=password],.form-group.large input[type=text],.form-group.large select,.form-group.large textarea{font-size:3em}.form-group .form-cap,.form-group input[type=password],.form-group input[type=text],.form-group select,.form-group textarea{font-size:2em}.form-group.small{padding-top:15px}.form-group.small .form-cap,.form-group.small input[type=password],.form-group.small input[type=text],.form-group.small select,.form-group.small textarea{font-size:1.3em}.form-group.error label{color:#e30000!important}.form-group.error .form-cap,.form-group.error input[type=password],.form-group.error input[type=text],.form-group.error select,.form-group.error textarea{color:#e30000;border-bottom-color:#e30000;border-bottom-width:2px}.form-error{color:#e30000;margin-top:2px;font-size:12px;font-weight:700}label{font-size:12px;color:#ccc;position:absolute;top:0;left:0;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out}.form-cap,input[type=password],input[type=text],select,textarea{display:block;width:100%;border:0;outline:0;border-bottom:1px solid #ccc;-webkit-transition:border-bottom-color .2s ease-in-out;transition:border-bottom-color .2s ease-in-out;resize:none;background:0 0}.form-cap:focus,.form-cap:hover,input[type=password]:focus,input[type=password]:hover,input[type=text]:focus,input[type=text]:hover,select:focus,select:hover,textarea:focus,textarea:hover{border-bottom-color:#000;outline:0}.form-cap:focus+label,.form-cap:hover+label,input[type=password]:focus+label,input[type=password]:hover+label,input[type=text]:focus+label,input[type=text]:hover+label,select:focus+label,select:hover+label,textarea:focus+label,textarea:hover+label{color:#000}/*!!
  * section: Forms
  * title: Select
  * example: |
@@ -108,7 +122,7 @@
  *     <textarea id="description" placeholder="blonde hair and blue eyes"></textarea>
  *     <label for="description">Description</label>
  *   </div>
- */*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}body,html{margin:0;width:100%;height:100%;font-family:Lato,sans-serif}h1,h2,h3,h4,h5,h6{margin-top:0;color:#000}p{margin-top:0}/*!!
+ */.form-cap{padding-bottom:2px}.form-cap:hover{border-bottom-color:#ccc}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}body,html{margin:0;width:100%;height:100%;font-family:Lato,sans-serif}h1,h2,h3,h4,h5,h6{margin-top:0;color:#000}p{margin-top:0}/*!!
  * section: Link
  * example: <a href="#" class="link">Link</a>
  */a{color:#000}.link,.site-body a:not([class]){position:relative;text-decoration:none}.link:after,.link:before,.site-body a:not([class]):after,.site-body a:not([class]):before{content:'';position:absolute;bottom:-2px;left:0;height:2px;width:100%;background:#000;opacity:.2}.link:after,.site-body a:not([class]):after{opacity:1;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.link:hover:after,.site-body a:not([class]):hover:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}/*!!

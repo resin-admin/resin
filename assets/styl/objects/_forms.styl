@@ -1,19 +1,24 @@
-inputFields = "input[type='text'], input[type='password'], textarea, select"
+inputFields = "input[type='text'], input[type='password'], textarea, select, .form-cap"
+
+form
+  margin-bottom: -25px
 
 /*!!!
  * section: Forms
  * title: Fieldset
  * example: |
- *   <fieldset>
- *     <div class="form-group">
- *       <input id="address" type="text" placeholder="123 Sunshine St." />
- *       <label for="address">Address</label>
- *     </div>
- *     <div class="form-group">
- *       <input id="postal" type="text" placeholder="L4C 1B2" />
- *       <label for="postal">Postal Code</label>
- *     </div>
- *   </fieldset>
+ *   <form>
+ *     <fieldset>
+ *       <div class="form-group">
+ *         <input id="address" type="text" placeholder="123 Sunshine St." />
+ *         <label for="address">Address</label>
+ *       </div>
+ *       <div class="form-group">
+ *         <input id="postal" type="text" placeholder="L4C 1B2" />
+ *         <label for="postal">Postal Code</label>
+ *       </div>
+ *     </fieldset>
+ *   </form>
  */
 fieldset
   border: 0
@@ -26,10 +31,12 @@ fieldset
  * section: Forms
  * title: (Normal) Input Field
  * example: |
- *   <div class="form-group">
- *     <input id="firstName" type="text" placeholder="Susan" />
- *     <label for="firstName">First Name</label>
- *   </div>
+ *   <form>
+ *     <div class="form-group">
+ *       <input id="firstName" type="text" placeholder="Susan" />
+ *       <label for="firstName">First Name</label>
+ *     </div>
+ *   </form>
  */
 .form-group
   display: block
@@ -40,10 +47,12 @@ fieldset
    * section: Forms
    * title: Large Input Field
    * example: |
-   *   <div class="large form-group">
-   *     <input id="title" type="text" placeholder="The Lord of the Rings" />
-   *     <label for="title">Title</label>
-   *   </div>
+   *   <form>
+   *     <div class="large form-group">
+   *       <input id="title" type="text" placeholder="The Lord of the Rings" />
+   *       <label for="title">Title</label>
+   *     </div>
+   *   </form>
    */
   &.large
     {inputFields}
@@ -54,10 +63,12 @@ fieldset
    * section: Forms
    * title: Small Input Field
    * example: |
-   *   <div class="small form-group">
-   *     <input id="lastName" type="text" placeholder="Sanders" />
-   *     <label for="lastName">Last Name</label>
-   *   </div>
+   *   <form>
+   *     <div class="small form-group">
+   *       <input id="lastName" type="text" placeholder="Sanders" />
+   *       <label for="lastName">Last Name</label>
+   *     </div>
+   *   </form>
    */
   &.small
     padding-top: 15px
@@ -67,11 +78,13 @@ fieldset
    * section: Forms
    * title: Error
    * example: |
-   *   <div class="form-group error">
-   *     <input id="age" type="text" placeholder="34" />
-   *     <label for="age">Age</label>
-   *     <div class="form-error">This field is required</div>
-   *   </div>
+   *   <form>
+   *     <div class="form-group error">
+   *       <input id="age" type="text" placeholder="34" />
+   *       <label for="age">Age</label>
+   *       <div class="form-error">This field is required</div>
+   *     </div>
+   *   </form>
    */
   &.error
     label
@@ -104,7 +117,7 @@ label
   transition border-bottom-color 0.2s ease-in-out
   resize: none
   background: transparent
-  &:focus
+  &:focus, &:hover
     border-bottom-color: primaryColor
     outline: none
     + label
@@ -159,3 +172,8 @@ select:-moz-focusring
  *     <label for="description">Description</label>
  *   </div>
  */
+
+.form-cap
+  padding-bottom: 2px
+  &:hover
+    border-bottom-color: greyColor

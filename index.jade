@@ -59,139 +59,188 @@ html
             | New Place
 
       .site-body
-        header.page-header
-          h1 Tabbing
-        section.page-section
-          ul.tab-trigger
-            li.active Tab One
-            li Tab Two
-            li Tab Three
-          ul.tab-content
-            li.active content one
-            li content two
-            li content three
 
-        header.page-header
-          h1 Form Examples
-        section.page-section
-          fieldset
-            .grid
-              .grid__item.one-whole
-                .form-group.large
-                  input(type='text', id='shortTitle', placeholder='Short product title (about 15 words)')
-                  label(for='shortTitle') Short Title
 
-              .grid__item.one-half
-                .form-group
-                  input(type='text', id='firstName', placeholder='Jane')
-                  label(for='firstName') First Name
+        header.page-header 
+          h1 Edit Page
 
-              .grid__item.one-half
-                .form-group.error
-                  input(type='text', id='lastName', placeholder='Smith')
-                  label(for='lastName') Last Name
-                  .form-error
-                    | This field is required
-          fieldset
-            .grid
-              .grid__item.one-half
+        .grid
+          .grid__item.two-thirds
+            form
+              .form-group.large
+                input(type='text', placeholder='The Lord of the Rings')
+                label Main Title
+
+              .form-group
+                input(type='text', placeholder='An epic high fantasy novel written by English author J. R. R. Tolkien.')
+                label Short Lede (~15 words)
+
+              .form-group.small
+                textarea(placeholder="Long before the events of the novel, the Dark Lord Sauron forges the One Ring to rule the other Rings of Power and corrupt those who wear them: the leaders of Men, Elves and Dwarves.")
+                label Long Lede (~100 words)
+
+              .form-group.small
+                .combo.combo-full
+                  .combo-first
+                    .form-cap www.foo.com/
+                  .combo-last
+                    input(type='text', placeholder='about')
+                    label Slug
+              .form-group
+                textarea
+                label Body
+
+          .grid__item.one-third 
+            .card
+              form
                 .form-group.small
-                  input(type='text', id='email', placeholder='jane@gmail.com')
-                  label(for='email') Email Address
+                  select
+                    option Draft
+                    option Publish
+                    option Trash
+                  label Status
 
-              .grid__item.one-half
                 .form-group.small
-                  select(id='size')
-                    option Select a size
-                    option Large
-                    option Medium
-                    option Small
-                  label(for='size') Size
-            .grid
-              .grid__item.one-half
-                .form-group.small
-                  textarea(id='description')
-                  label(for='description') Description
+                  select
+                    option Latest
+                    option August 12th
+                    option August 9th
+                  label Version
+            a.wide.button(href='#') Update Page
 
-        header.page-header
-          h1 Overview
-        section.page-section
-          h2 Outstanding Tasks
-          .grid
-            .grid__item.one-third
-              .card
-                .notice 52
-                p
-                  strong 52
-                  | user's comments are pending approval.
-                a.primary.button.wide(href='#') Approve Comments
-            .grid__item.one-third
-              .card
-                .notice 14
-                p
-                  strong 14
-                  | sections of copy are missing translation.
-                a.primary.button.wide(href='#') Add Translations
-        section.page-section
-          h2 Key Performance Indicators
-          .grid
-            .grid__item.one-third
-              .card
-                h4 User Sign-ups
-                .square
-                  canvas.chart(width='200', height='200')
-            .grid__item.one-third
-              .card
-                h4 Daily Page Views
-                .square
-                  canvas.chart(width='200', height='200')
-            .grid__item.one-third
-              .card
-                h4 Daily Revenue
-                .square
-                  canvas.chart(width='200', height='200')
-        section.page-section
-          h2 Blog Posts
-          table(cellspacing='0')
-            thead
-              tr
-                th Title
-                th Status
-                th Author
-                th Created
-                th Updated
-                th Actions
-            tbody
-              tr
-                td
-                  a(href='#') Our experience at Node conference
-                td Published
-                td
-                  a(href='#') Derek Watson
-                td 2 days ago
-                td 2 days ago
-                td
-                  a(href='#') edit
-              tr
-                td
-                  a(href='#') Our experience at Node conference
-                td Published
-                td
-                  a(href='#') Derek Watson
-                td 2 days ago
-                td 2 days ago
-                td
-                  a(href='#') edit
-              tr
-                td
-                  a(href='#') Our experience at Node conference
-                td Published
-                td
-                  a(href='#') Derek Watson
-                td 2 days ago
-                td 2 days ago
-                td
-                  a(href='#') edit
+        //header.page-header
+        //  h1 Tabbing
+        //section.page-section
+        //  ul.tab-trigger
+        //    li.active Tab One
+        //    li Tab Two
+        //    li Tab Three
+        //  ul.tab-content
+        //    li.active content one
+        //    li content two
+        //    li content three
+
+        //header.page-header
+        //  h1 Form Examples
+        //section.page-section
+        //  fieldset
+        //    .grid
+        //      .grid__item.one-whole
+        //        .form-group.large
+        //          input(type='text', id='shortTitle', placeholder='Short product title (about 15 words)')
+        //          label(for='shortTitle') Short Title
+
+        //      .grid__item.one-half
+        //        .form-group
+        //          input(type='text', id='firstName', placeholder='Jane')
+        //          label(for='firstName') First Name
+
+        //      .grid__item.one-half
+        //        .form-group.error
+        //          input(type='text', id='lastName', placeholder='Smith')
+        //          label(for='lastName') Last Name
+        //          .form-error
+        //            | This field is required
+        //  fieldset
+        //    .grid
+        //      .grid__item.one-half
+        //        .form-group.small
+        //          input(type='text', id='email', placeholder='jane@gmail.com')
+        //          label(for='email') Email Address
+
+        //      .grid__item.one-half
+        //        .form-group.small
+        //          select(id='size')
+        //            option Select a size
+        //            option Large
+        //            option Medium
+        //            option Small
+        //          label(for='size') Size
+        //    .grid
+        //      .grid__item.one-half
+        //        .form-group.small
+        //          textarea(id='description')
+        //          label(for='description') Description
+
+        //header.page-header
+        //  h1 Overview
+        //section.page-section
+        //  h2 Outstanding Tasks
+        //  .grid
+        //    .grid__item.one-third
+        //      .card
+        //        .notice 52
+        //        p
+        //          strong 52
+        //          | user's comments are pending approval.
+        //        a.primary.button.wide(href='#') Approve Comments
+        //    .grid__item.one-third
+        //      .card
+        //        .notice 14
+        //        p
+        //          strong 14
+        //          | sections of copy are missing translation.
+        //        a.primary.button.wide(href='#') Add Translations
+        //section.page-section
+        //  h2 Key Performance Indicators
+        //  .grid
+        //    .grid__item.one-third
+        //      .card
+        //        h4 User Sign-ups
+        //        .square
+        //          canvas.chart(width='200', height='200')
+        //    .grid__item.one-third
+        //      .card
+        //        h4 Daily Page Views
+        //        .square
+        //          canvas.chart(width='200', height='200')
+        //    .grid__item.one-third
+        //      .card
+        //        h4 Daily Revenue
+        //        .square
+        //          canvas.chart(width='200', height='200')
+        //section.page-section
+        //  h2 Blog Posts
+        //  table(cellspacing='0')
+        //    thead
+        //      tr
+        //        th Title
+        //        th Status
+        //        th Author
+        //        th Created
+        //        th Updated
+        //        th Actions
+        //    tbody
+        //      tr
+        //        td
+        //          a(href='#') Our experience at Node conference
+        //        td Published
+        //        td
+        //          a(href='#') Derek Watson
+        //        td 2 days ago
+        //        td 2 days ago
+        //        td
+        //          a(href='#') edit
+        //      tr
+        //        td
+        //          a(href='#') Our experience at Node conference
+        //        td Published
+        //        td
+        //          a(href='#') Derek Watson
+        //        td 2 days ago
+        //        td 2 days ago
+        //        td
+        //          a(href='#') edit
+        //      tr
+        //        td
+        //          a(href='#') Our experience at Node conference
+        //        td Published
+        //        td
+        //          a(href='#') Derek Watson
+        //        td 2 days ago
+        //        td 2 days ago
+        //        td
+        //          a(href='#') edit
 
     .site-overlay
       .spinner

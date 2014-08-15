@@ -14,13 +14,19 @@
   border-radius: radius
   text-align: center
   transition: all 0.2s ease-in-out
+
+  background-color: white;
+  background-image: linear-gradient(45deg, rgba(primaryColor, 0.015) 25%, transparent 25%, transparent 75%, rgba(primaryColor, 0.015) 75%), linear-gradient(45deg, rgba(primaryColor, 0.015) 25%, transparent 25%, transparent 75%, rgba(primaryColor, 0.015) 75%);
+  background-size:30px 30px;
+  background-position: 0 0, 15px 15px;
+
   img
     display: block
   progress
     margin-top: 10px
     display: none
   &.hover
-    background: rgba(black, 0.05)
+    background-color: rgba(black, 0.05)
     .dropzone-icon 
       &:before
         transform: scale(1.4)
@@ -29,6 +35,8 @@
         bottom: 30px
         opacity: 0
   &.uploading
+    background-color: transparent
+    background-image: none
     .dropzone-icon
       opacity: 0
       height: 0
@@ -61,6 +69,8 @@
     text-align: left
     padding: 15px
     border-style: solid
+    background-color: transparent
+    background-image: none
  
 .dropzone-icon
   position: relative
