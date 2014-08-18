@@ -1,5 +1,5 @@
 {
-  "name": "Resin",
+  "name": "resin",
   "version": "0.0.3",
   "main": "dist/css/resin.css",
   "dependencies": {
