@@ -6,7 +6,7 @@
     "font-awesome": "~4.1.0",
     "animate.css": "~3.1.1",
     "normalize.css": "~3.0.1",
-    "guidedog": "~0.0.4",
+    "guidedog": "~0.0.6",
     "jquery": "~2.1.1",
     "chartjs": "1.0.1-beta.2",
     "jquery-autosize": "~1.18.9",

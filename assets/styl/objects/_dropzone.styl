@@ -1,0 +1,103 @@
+/*!!!
+ * section: Dropzone
+ * description: A general asset upload area. Supports either drag & drop or the more traditional upload button (and corresponding file system navigation). Click the dropzone to cycle through its various states.
+ * example: |
+ *   <div class="dropzone">
+ *     <div class="dropzone-icon"></div>
+ *     <div class="dropzone-message">Drag and drop your file here or <a class="link" href="#">browse</a>.</div>
+ *     <progress value="0" max="100"></progress>
+ *   </div>
+ */
+.dropzone
+  border: 2px dashed primaryColor
+  padding: 60px 30px
+  border-radius: radius
+  text-align: center
+  transition: all 0.2s ease-in-out
+  background-color: white;
+  background-image: linear-gradient(45deg, rgba(primaryColor, 0.015) 25%, transparent 25%, transparent 75%, rgba(primaryColor, 0.015) 75%), linear-gradient(45deg, rgba(primaryColor, 0.015) 25%, transparent 25%, transparent 75%, rgba(primaryColor, 0.015) 75%);
+  background-size:30px 30px;
+  background-position: 0 0, 15px 15px;
+
+  img
+    display: block
+  progress
+    margin-top: 10px
+    display: none
+  &.hover
+    background-color: rgba(black, 0.05)
+    .dropzone-icon 
+      &:before
+        transform: scale(1.4)
+      &:after
+        transform: scale(1.6)
+        bottom: 30px
+        opacity: 0
+  &.uploading
+    background-color: transparent
+    background-image: none
+    .dropzone-icon
+      opacity: 0
+      height: 0
+      &:before
+        transform: scale(1.4)
+      &:after
+        transform: scale(1.6)
+        bottom: 30px
+        opacity: 0
+    progress
+      display: block
+
+  /*!!!
+   * section: Dropzone
+   * title: Uploaded State
+   * example: |
+   *   <div class="dropzone uploaded">
+   *     <div class="combo">
+   *       <div class="combo-first">
+   *         <img src="http://placehold.it/70x90" />
+   *       </div>
+   *       <div class="combo-last">
+   *         logo.png <small>(45kb)</small><br />
+   *         <small><a href="#" class="link">remove</a></small>
+   *       </div>
+   *     </div>
+   *   </div>
+   */
+  &.uploaded
+    text-align: left
+    padding: 15px
+    border-style: solid
+    background-color: transparent
+    background-image: none
+ 
+.dropzone-icon
+  position: relative
+  height: 52px
+  display: inline-block
+  width: 100%
+  transition: all 0.2s ease-in-out
+  &:before, &:after
+    display: inline-block
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    left: 50%
+    position: absolute
+    margin-left: -12px
+    transition: all 0.2s ease-in-out
+  &:before
+    content: "\f0c2"
+    font-size: 52px
+    margin-left: -28px
+    bottom: 0
+  &:after
+    content: "\f062"
+    font-size: 24px
+    margin-left: -11px
+    bottom: 12px
+    color: white
+
