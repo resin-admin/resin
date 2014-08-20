@@ -1,0 +1,82 @@
+extends _layout
+block content
+
+  header.page-header
+    h1 Overview
+  section.page-section
+    h2 Outstanding Tasks
+    .grid
+      .grid__item.one-third
+        .card
+          .notice 52
+          p
+            strong 52
+            | user's comments are pending approval.
+          a.primary.button.wide(href='#') Approve Comments
+      .grid__item.one-third
+        .card
+          .notice 14
+          p
+            strong 14
+            | sections of copy are missing translation.
+          a.primary.button.wide(href='#') Add Translations
+  section.page-section
+    h2 Key Performance Indicators
+    .grid
+      .grid__item.one-third
+        .card
+          h4 User Sign-ups
+          .square
+            canvas.chart(width='200', height='200')
+      .grid__item.one-third
+        .card
+          h4 Daily Page Views
+          .square
+            canvas.chart(width='200', height='200')
+      .grid__item.one-third
+        .card
+          h4 Daily Revenue
+          .square
+            canvas.chart(width='200', height='200')
+  section.page-section
+    h2 Blog Posts
+    table(cellspacing='0')
+      thead
+        tr
+          th Title
+          th Status
+          th Author
+          th Created
+          th Updated
+          th Actions
+      tbody
+        tr
+          td
+            a(href='#') Our experience at Node conference
+          td Published
+          td
+            a(href='#') Derek Watson
+          td 2 days ago
+          td 2 days ago
+          td
+            a(href='#') edit
+        tr
+          td
+            a(href='#') Our experience at Node conference
+          td Published
+          td
+            a(href='#') Derek Watson
+          td 2 days ago
+          td 2 days ago
+          td
+            a(href='#') edit
+        tr
+          td
+            a(href='#') Our experience at Node conference
+          td Published
+          td
+            a(href='#') Derek Watson
+          td 2 days ago
+          td 2 days ago
+          td
+            a(href='#') edit

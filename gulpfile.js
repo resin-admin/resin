@@ -46,9 +46,9 @@ gulp.task('js', function() {
 
 //-- Convert Jade to HTML -----------------------------------------------------
 gulp.task('jade', function() {
-  return gulp.src('./*.jade')
+  return gulp.src('./views/**/*.jade')
     .pipe(jade())
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 //-- Manage vendor CSS -----------------------------------------------------
@@ -79,7 +79,7 @@ gulp.task('fonts', function() {
 
 //-- Watch Files for Changes -----------------------------------------------------
 gulp.task('watch', function() {
-  gulp.watch('./*.jade', ['jade']);
+  gulp.watch('./views/**/*.jade', ['jade']);
   gulp.watch('./assets/js/**/*.js', ['js']);
   gulp.watch('./assets/styl/**/*.styl', ['styl']);
 });

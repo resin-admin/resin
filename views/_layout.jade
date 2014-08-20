@@ -1,0 +1,65 @@
+doctype html 
+html
+  head
+    link(href='css/vendor.css', rel='stylesheet')
+    script(src='js/vendor.min.js', type='text/javascript')
+
+    link(href='css/resin.css', rel='stylesheet')
+    script(src='js/resin.min.js', type='text/javascript')
+  body
+    .site-wrapper
+
+      nav.site-primary-nav
+        img.logo(src='assets/img/logo.jpg', alt='')
+        a.fa.fa-home.active(href='#')
+          span Dashboard
+        a.fa.fa-file-o(href='#')
+          span Pages
+        a.fa.fa-paperclip(href='#')
+          span Collections
+        a.fa.fa-bar-chart-o(href='#')
+          span Reports
+        a.fa.fa-gear(href='#')
+          span Admin
+        a.fa.fa-question-circle(href='#')
+          span Help
+        a.fa.fa-user(href='#')
+          span Account
+
+      nav.site-secondary-nav.animated.fadeInLeft
+        h3.nav-title  Dashboard 
+        .nav-group
+          a(href='#')
+            i.fa.fa-home
+            | Overview
+        .nav-group
+          a(href='#')
+            i.fa.fa-file-word-o
+            | New Article
+          a(href='#')
+            i.fa.fa-edit
+            | New Blog Post
+          a(href='#')
+            i.fa.fa-file-o
+            | New Page
+          a.active(href='#')
+            i.fa.fa-navicon
+            | New Menu
+          a(href='#')
+            i.fa.fa-gift
+            | New Product
+          a(href='#')
+            i.fa.fa-code
+            | New Snippet
+          a(href='#')
+            i.fa.fa-calendar
+            | New Event
+          a(href='#')
+            i.fa.fa-globe
+            | New Place
+
+      .site-body
+        block content
+
+    .site-overlay
+      .spinner
