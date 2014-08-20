@@ -9,3 +9,16 @@
   background white
   padding 25px
   padding-left secondaryNavWidth + primaryNavWidth + 25
+  &.plain
+    margin: 0 auto
+    padding: 20px
+    position: relative
+    max-width: 600px
+
+.plain-spacer
+  &:before
+    content: ''
+    display: block
+    padding-top: 25%
+    @media palmBreakpoint
+      padding-top: 0 
