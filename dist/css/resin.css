@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);/*!!
+ * section: Colours
+ * swatches: [{name: primaryColor, value: "#01658F"}, {name: secondaryColor, value: "#6FC162"}, {name: greyColor, value: "#cccccc"}, {name: lightGreyColor, value: "#eeeeee"}, {name: textColor, value: "white"}, {name: noticeColor, value: "#5BC0DE"}, {name: successColor, value: "#5CB85C"}, {name: errorColor, value: "#D9534F"}, {name: warningColor, value: "#F0AD4E"}]
+ *//*!!
  * section: Grid
  * description: The grid system used for Urban Adventures is a modified version of the [CSS Wizardry Grid](https://github.com/csswizardry/csswizardry-grids). The updated grid includes one additional breakpoint named "large".
  * example: |
