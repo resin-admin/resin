@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     order = require('gulp-order'),
     jade = require('gulp-jade'),
+    nodemon = require('gulp-nodemon'),
+    notify = require('gulp-notify'),
     concat = require('gulp-concat');
 
 //-- Bower Dependencies -----------------------------------------------------
@@ -26,7 +28,10 @@ var bowerCssDependencies = [
 //-- Concat & Minify Stylus -----------------------------------------------------
 gulp.task('styl', function() {
   return gulp.src('./assets/styl/resin.styl')
-    .pipe(stylus({errors: false}))
+    .pipe(stylus())
+    .on("error", notify.onError(function (error) {
+      return "Stylus error: " + error.message;
+    }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(minify())
     .pipe(gulp.dest('./dist/css'));
@@ -48,6 +53,9 @@ gulp.task('js', function() {
 gulp.task('jade', function() {
   return gulp.src('./views/**/*.jade')
     .pipe(jade())
+    .on("error", notify.onError(function (error) {
+      return "Jade error: " + error.message;
+    }))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -77,6 +85,19 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('./dist/fonts'));
 });
 
+//-- Start local server -----------------------------------------------------
+gulp.task('server', function() {
+  nodemon({
+    verbose: false,
+    script: 'server.js',
+    watch: ['source', 'server.js'],
+    ext: 'js json',
+    env: {
+      NODE_ENV: 'development'
+    }
+  })
+})
+
 //-- Watch Files for Changes -----------------------------------------------------
 gulp.task('watch', function() {
   gulp.watch('./views/**/*.jade', ['jade']);
@@ -85,4 +106,4 @@ gulp.task('watch', function() {
 });
 
 //-- Default Task -----------------------------------------------------
-gulp.task('default', ['styl', 'js', 'jade', 'vendor-css', 'vendor-js', 'fonts', 'watch']);
+gulp.task('default', ['styl', 'js', 'jade', 'vendor-css', 'vendor-js', 'fonts', 'server', 'watch']);
