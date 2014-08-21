@@ -1,6 +1,6 @@
 {
   "name": "resin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/css/resin.css",
   "dependencies": {
     "font-awesome": "~4.1.0",
