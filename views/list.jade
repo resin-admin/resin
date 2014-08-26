@@ -1,0 +1,30 @@
+extends _layout
+block content
+  
+  header.page-header
+    h1 Articles
+
+  .page-sections
+    .page-section
+      table
+        thead
+          tr
+            th Title
+            th Description
+            th Status
+            th Author
+            th Created
+            th Updated
+            th Actions
+        tbody
+          - for(var i=0; i<10; i++)
+            tr
+              td 
+                a.link(href="#") Splitting Hairs
+              td How the haircutting industry has evolved
+              td Published
+              td Mark Appleby
+              td Today at 2:50 PM
+              td Today at 2:50 PM
+              td 
+                a.link(href="#") Edit

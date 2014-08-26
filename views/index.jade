@@ -50,33 +50,14 @@ block content
           th Updated
           th Actions
       tbody
-        tr
-          td
-            a(href='#') Our experience at Node conference
-          td Published
-          td
-            a(href='#') Derek Watson
-          td 2 days ago
-          td 2 days ago
-          td
-            a(href='#') edit
-        tr
-          td
-            a(href='#') Our experience at Node conference
-          td Published
-          td
-            a(href='#') Derek Watson
-          td 2 days ago
-          td 2 days ago
-          td
-            a(href='#') edit
-        tr
-          td
-            a(href='#') Our experience at Node conference
-          td Published
-          td
-            a(href='#') Derek Watson
-          td 2 days ago
-          td 2 days ago
-          td
-            a(href='#') edit
+        - for(var i = 0; i<3; i++)
+          tr
+            td
+              a(href='/edit.html') Our experience at Node conference
+            td Published
+            td
+              a(href='#') Derek Watson
+            td 2 days ago
+            td 2 days ago
+            td
+              a(href='/edit.html') edit
