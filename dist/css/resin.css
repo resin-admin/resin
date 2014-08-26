@@ -25,7 +25,7 @@
    * title: Secondary Button
    * section: Buttons
    * example: <a href="#" class="secondary button">Secondary Button</a>
-   */}.button:hover{opacity:1;-webkit-box-shadow:0 5px 0 transparent;box-shadow:0 5px 0 transparent;border-top-width:2px;border-bottom-width:0}.button i{margin-right:10px}.button.secondary{color:#000;background:#7f7f7f;border-bottom-color:#666}/*!!
+   */}.button:hover{opacity:1;-webkit-box-shadow:0 5px 0 transparent;box-shadow:0 5px 0 transparent;border-top-width:2px;border-bottom-width:0}.button i{margin-right:10px}.button.secondary{color:#000;background:#dcdcdc;border-bottom-color:#666}/*!!
  * section: Card
  * example: |
  *   <div class="cards">
