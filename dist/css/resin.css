@@ -21,11 +21,11 @@
  * title: Button (default)
  * section: Buttons
  * example: <a href="#" class="button">Button</a>
- */.button{-webkit-transition:all .15s ease-in-out;transition:all .15s ease-in-out;-webkit-box-shadow:0 5px 5px rgba(0,0,0,.2);box-shadow:0 5px 5px rgba(0,0,0,.2);display:inline-block;padding:10px;text-decoration:none;background:#01658f;color:#fff;text-align:center;border-top:0 solid #fff;border-bottom:2px solid #01415c;opacity:.9;border-radius:3px;margin-bottom:10px;cursor:pointer;/*!!
+ */.button{-webkit-transition:all .15s ease-in-out;transition:all .15s ease-in-out;-webkit-box-shadow:0 5px 5px rgba(0,0,0,.2);box-shadow:0 5px 5px rgba(0,0,0,.2);display:inline-block;padding:10px;text-decoration:none;background:#01658f;color:#fff;text-align:center;border-top:0 solid #fff;border-bottom:2px solid #01415c;opacity:.9;border-radius:3px;cursor:pointer;/*!!
    * title: Secondary Button
    * section: Buttons
    * example: <a href="#" class="secondary button">Secondary Button</a>
-   */}.button:hover{opacity:1;-webkit-box-shadow:0 5px 0 transparent;box-shadow:0 5px 0 transparent;border-top-width:2px;border-bottom-width:0}.button i{margin-right:10px}.button.secondary{color:#000;background:#dcdcdc;border-bottom-color:#b2b2b2}/*!!
+   */}.button+.button{margin-left:12px}.button:hover{opacity:1;-webkit-box-shadow:0 5px 0 transparent;box-shadow:0 5px 0 transparent;border-top-width:2px;border-bottom-width:0}.button i{margin-right:10px}.button.secondary{color:#000;background:#dcdcdc;border-bottom-color:#b2b2b2}/*!!
  * section: Card
  * example: |
  *   <div class="cards">
@@ -100,7 +100,7 @@
    *     Watch out! I'm a warning flash message.
    *     <i class="flash-close fa fa-times"></i>
    *   </div>
-   */}.flash .flash-close{color:#5bc0de}.flash:after,.flash:before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}.flash:after{background:rgba(0,0,0,.25);top:auto;bottom:0}.flash.success{background:#5cb85c}.flash.success .flash-close{color:#5cb85c}.flash.error{background:#d9534f}.flash.error .flash-close{color:#d9534f}.flash.warning{background:#f0ad4e}.flash.warning .flash-close{color:#f0ad4e}.flash-close{position:absolute;top:15px;right:15px;padding:2px;border-radius:100%;width:20px;height:20px;text-align:center;background:#fff;cursor:pointer;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.flash-close:hover{opacity:.7}form{margin-bottom:-25px}/*!!
+   */}.flash .flash-close{color:#5bc0de}.flash:after,.flash:before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}.flash:after{background:rgba(0,0,0,.25);top:auto;bottom:0}.flash.success{background:#5cb85c}.flash.success .flash-close{color:#5cb85c}.flash.error{background:#d9534f}.flash.error .flash-close{color:#d9534f}.flash.warning{background:#f0ad4e}.flash.warning .flash-close{color:#f0ad4e}.flash-close{position:absolute;top:15px;right:15px;padding:2px;border-radius:100%;width:20px;height:20px;text-align:center;background:#fff;cursor:pointer;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.flash-close:hover{opacity:.7}.form-groups,form{margin-bottom:-25px}/*!!
  * section: Forms
  * title: Fieldset
  * example: |
@@ -264,7 +264,7 @@ jade: |
  *     <li>Content Two</li>
  *     <li>Content Three</li>
  *   </ul>
- */.tab-trigger{padding:0;margin:0;list-style-type:none;zoom:1}.tab-trigger:after,.tab-trigger:before{content:"";display:table}.tab-trigger:after{clear:both}.tab-trigger li{float:left;border:1px solid #7f7f7f;background:#dcdcdc;padding:10px 25px;cursor:pointer}.tab-trigger li:first-child{border-top-left-radius:3px}.tab-trigger li:last-child{border-top-right-radius:3px}.tab-trigger li.active{background:#fff;cursor:default;border-bottom-color:#fff}.tab-content{padding:0;margin:-1px 0 20px;list-style-type:none}.tab-content li{display:none;border:1px solid #7f7f7f;padding:25px;border-radius:0 3px 3px}.tab-content li.active{display:block;background:#fff}/*!!
+ */.tab-trigger{padding:0;margin:0;list-style-type:none;zoom:1}.tab-trigger:after,.tab-trigger:before{content:"";display:table}.tab-trigger:after{clear:both}.tab-trigger li{float:left;border:1px solid #dcdcdc;background:#f6f6f6;padding:10px 25px;cursor:pointer}.tab-trigger li:first-child{border-top-left-radius:3px}.tab-trigger li:last-child{border-top-right-radius:3px}.tab-trigger li.active{background:#fff;cursor:default;border-bottom-color:#fff}.tab-content{padding:0;margin:-1px 0 20px;list-style-type:none}.tab-content li{display:none;border:1px solid #dcdcdc;padding:25px;border-radius:0 3px 3px}.tab-content li.active{display:block;background:#fff}/*!!
 section: Tags
 jade: |
   ul.tags
@@ -272,7 +272,7 @@ jade: |
       li.tag 
         | single tag
         i.fa.fa-times
-*/.tags{list-style-type:none;padding:0;margin:0 0 -10px}.tag{background:#dcdcdc;padding:5px 10px;border-radius:3px;display:inline-block;margin:0 10px 10px 0;position:relative;overflow:hidden;color:rgba(93,93,93,.8);font-weight:700;text-shadow:0 1px 0 #fff}.tag i{margin-left:5px;cursor:pointer;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out}.tag i:hover{color:#333}.tag:before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}/*!!
+*/.tags{list-style-type:none;padding:0;margin:0 -10px -10px 0}.tag{border:1px solid #b2b2b2;padding:5px 10px;border-radius:3px;display:inline-block;margin:0 10px 10px 0;position:relative;overflow:hidden;color:#b2b2b2}.tag i{margin-left:5px;cursor:pointer;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out;font-size:90%}.tag i:hover{color:#333}.tag:before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}/*!!
  * title: Wide
  * section: Helpers
  * description: Ensure element spans fully across its available width

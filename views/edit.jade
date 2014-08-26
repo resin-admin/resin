@@ -31,6 +31,41 @@ block content
             textarea
             label Body
 
+      .card
+        .spacer
+          ul.tags
+            - for(var i = 0; i<10; i++)
+              li.tag 
+                | single tag
+                i.fa.fa-times
+
+
+        .grid.grid--wide.grid--bottom
+          .grid__item.two-thirds
+            .form-groups
+              .form-group
+                select
+                  option select a tag
+                  option Popular
+                  option On Sale
+                label Add an existing tag
+          .grid__item.one-third
+            a.wide.secondary.button Add a new tag
+
+        .spacer
+        .grid.grid--wide.grid--bottom
+          .grid__item.two-thirds
+            .form-groups
+              .form-group
+                input(type='text', placeholder='modern')
+                label Add a new tag
+          .grid__item.one-third
+            .grid.grid--narrow
+              .grid__item.one-half
+                a.wide.secondary.button Cancel
+              .grid__item.one-half
+                a.wide.button Add tag
+
     .grid__item.one-third.portable--one-whole
       .card
         form
