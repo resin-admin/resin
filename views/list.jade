@@ -6,6 +6,25 @@ block content
 
   .page-sections
     .page-section
+      .form-groups.inline
+        .form-group.small
+          select
+            option All Authors
+            option Mark Appleby
+            option Jane Doe
+          label Filter by Author
+        .form-group.small
+          select
+            option All Authors
+            option Mark Appleby
+            option Jane Doe
+          label Filter by Author
+        .form-group.small
+          input(type='text', placeholder='Splitting Hairs')
+          label Filter by Name
+        .form-group.small
+          a.secondary.button(href='#') Filter
+    .page-section
       table
         thead
           tr
@@ -20,11 +39,11 @@ block content
           - for(var i=0; i<10; i++)
             tr
               td 
-                a.link(href="#") Splitting Hairs
+                a.link(href="/edit.html") Splitting Hairs
               td How the haircutting industry has evolved
               td Published
               td Mark Appleby
               td Today at 2:50 PM
               td Today at 2:50 PM
               td 
-                a.link(href="#") Edit
+                a.link(href="/edit.html") Edit
