@@ -1,0 +1,36 @@
+/*!!!
+section: Tags
+jade: |
+  ul.tags
+    - for(var i = 0; i<10; i++)
+      li.tag
+        a(href='#') single tag
+*/
+
+.tags
+  list-style-type: none
+  padding: 0
+  margin: 0
+  margin-bottom: -10px
+
+.tag
+  background: lightGreyColor
+  padding: 5px 10px
+  border-radius: radius
+  display: inline-block
+  margin: 0 10px 10px 0
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 2px
+    background: rgba(white, 0.25)
+  a
+    text-decoration: none
+    color: rgba(textColor, 0.7)
+    font-weight: bold
+    text-shadow: 0 1px 0 white
