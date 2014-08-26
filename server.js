@@ -4,7 +4,7 @@ var path = require('path')
 var connect = require('connect')
 var serveStatic = require('serve-static')
 
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 2000
 var server = connect()
 
 server.use('/vendor', serveStatic(path.join(__dirname, '/vendor')))

@@ -1,27 +1,38 @@
 /*!!!
  * section: Colours
- * swatches: [{name: primaryColor, value: "#01658F"}, {name: secondaryColor, value: "#6FC162"}, {name: greyColor, value: "#cccccc"}, {name: lightGreyColor, value: "#eeeeee"}, {name: textColor, value: "black"}, {name: noticeColor, value: "#5BC0DE"}, {name: successColor, value: "#5CB85C"}, {name: errorColor, value: "#D9534F"}, {name: warningColor, value: "#F0AD4E"}]
+ * swatches: [{name: primaryColor, value: "#01658F"}, {name: secondaryColor, value: "#6FC162"}, {name: lightestGrey, value: "#f6f6f6"}, {name: lighterGrey, value: "#dcdcdc"}, {name: lightGrey, value: '#b2b2b2'}, {name: grey, value: '#7F7F7F'}, {name: darkGrey, value: '#5d5d5d'}, {name: darkerGrey, value: '#333'}, {name: darkestGrey, value: '#111'}, {name: noticeColor, value: "#5BC0DE"}, {name: successColor, value: "#5CB85C"}, {name: errorColor, value: "#D9534F"}, {name: warningColor, value: "#F0AD4E"}]
  */
+// main colours
 primaryColor = #01658F
 secondaryColor = #6FC162
-greyColor = #ccc
-lightGreyColor = #eee
-textColor = black
+//primaryColor = black 
+//secondaryColor = black 
+
+// greys
+lightestGrey = #f6f6f6
+lighterGrey = #dcdcdc
+lightGrey = #b2b2b2
+grey = #7F7F7F
+darkGrey = #5d5d5d
+darkerGrey = #333
+darkestGrey = #111
+
+// messaging colours
 noticeColor = #5BC0DE
 successColor = #5CB85C
 errorColor = #D9534F
 warningColor = #F0AD4E
 
+// transitions
 bounce = cubic-bezier(0.145, 0.420, 0.425, 1.650)
 bounceOut = cubic-bezier(.5, -0.85, .73, .52)
 
+// other variables
 radius = 3px
 primaryNavWidth = 100px
 secondaryNavWidth = 200px
 
-//primaryColor = black 
-//secondaryColor = black 
-
+// clearfix helper
 clearfix()
   zoom 1
   &:after
