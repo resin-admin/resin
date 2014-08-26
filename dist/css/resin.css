@@ -262,9 +262,10 @@ section: Tags
 jade: |
   ul.tags
     - for(var i = 0; i<10; i++)
-      li.tag
-        a(href='#') single tag
-*/.tags{list-style-type:none;padding:0;margin:0 0 -10px}.tag{background:#dcdcdc;padding:5px 10px;border-radius:3px;display:inline-block;margin:0 10px 10px 0;position:relative;overflow:hidden}.tag:before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}.tag a{text-decoration:none;color:rgba(93,93,93,.8);font-weight:700;text-shadow:0 1px 0 #fff}/*!!
+      li.tag 
+        | single tag
+        i.fa.fa-times
+*/.tags{list-style-type:none;padding:0;margin:0 0 -10px}.tag{background:#dcdcdc;padding:5px 10px;border-radius:3px;display:inline-block;margin:0 10px 10px 0;position:relative;overflow:hidden;color:rgba(93,93,93,.8);font-weight:700;text-shadow:0 1px 0 #fff}.tag i{margin-left:5px;cursor:pointer;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out}.tag i:hover{color:#333}.tag:before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.25)}/*!!
  * title: Wide
  * section: Helpers
  * description: Ensure element spans fully across its available width
