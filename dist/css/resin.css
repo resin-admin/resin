@@ -21,11 +21,11 @@
  * title: Button (default)
  * section: Buttons
  * example: <a href="#" class="button">Button</a>
- */.button{-webkit-transition:all .15s ease-in-out;transition:all .15s ease-in-out;display:inline-block;padding:10px;text-decoration:none;background:#01658f;color:#fff;text-align:center;border-radius:3px;cursor:pointer;-webkit-box-shadow:0 3px 3px rgba(0,0,0,.2);box-shadow:0 3px 3px rgba(0,0,0,.2);-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);/*!!
+ */.button{-webkit-transition:all .15s ease-in-out;transition:all .15s ease-in-out;display:inline-block;padding:10px;text-decoration:none;background:#01658f;color:#fff;text-align:center;border-radius:3px;cursor:pointer;-webkit-box-shadow:0 3px 3px rgba(0,0,0,.2);box-shadow:0 3px 3px rgba(0,0,0,.2);/*!!
    * title: Secondary Button
    * section: Buttons
    * example: <a href="#" class="secondary button">Secondary Button</a>
-   */}.button:hover{-webkit-box-shadow:0 0 0 transparent;box-shadow:0 0 0 transparent;-webkit-transform:translateY(1px);-ms-transform:translateY(1px);transform:translateY(1px)}.button+.button{margin-left:12px}.button i{margin-right:10px}.button.secondary{color:#000;background:#dcdcdc;border-bottom-color:#b2b2b2}/*!!
+   */}.button:hover{-webkit-box-shadow:0 0 0 transparent;box-shadow:0 0 0 transparent}.button+.button{margin-left:12px}.button i{margin-right:10px}.button.secondary{color:#000;background:#dcdcdc;border-bottom-color:#b2b2b2}/*!!
  * section: Card
  * example: |
  *   <div class="cards">
@@ -116,7 +116,24 @@
  *       </div>
  *     </fieldset>
  *   </form>
- */.form-groups.inline{margin-left:-25px}.form-groups.inline .form-group{display:inline-block;margin-left:25px;margin-bottom:0}.form-groups.inline .form-cap,.form-groups.inline input[type=password],.form-groups.inline input[type=text],.form-groups.inline select,.form-groups.inline textarea{width:auto;min-width:100px}fieldset{border:0;border-left:3px solid #7f7f7f;padding:25px 25px 0;margin-bottom:25px}/*!!
+ *//*!!
+section: Forms
+title: Inline Forms
+jade: |
+  .card
+    .form-groups.inline
+      .form-group.small
+        select
+          option All Authors
+          option Mark Appleby
+          option Jane Doe
+        label Filter by Author
+      .form-group.small
+        input(type='text', placeholder='Splitting Hairs')
+        label Filter by Name
+      .form-group.small
+        a.secondary.button(href='#') Filter
+*/.form-groups.inline{margin-left:-25px}.form-groups.inline .form-group{display:inline-block;margin-left:25px;vertical-align:bottom;padding-top:0}.form-groups.inline .form-cap,.form-groups.inline input[type=password],.form-groups.inline input[type=text],.form-groups.inline select,.form-groups.inline textarea{width:auto;min-width:100px;margin-top:15px}fieldset{border:0;border-left:3px solid #7f7f7f;padding:25px 25px 0;margin-bottom:25px}/*!!
  * section: Forms
  * title: (Normal) Input Field
  * example: |

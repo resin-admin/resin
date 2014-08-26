@@ -21,17 +21,39 @@ form, .form-groups
  *   </form>
  */
 
+/*!!!
+section: Forms
+title: Inline Forms
+jade: |
+  .card
+    .form-groups.inline
+      .form-group.small
+        select
+          option All Authors
+          option Mark Appleby
+          option Jane Doe
+        label Filter by Author
+      .form-group.small
+        input(type='text', placeholder='Splitting Hairs')
+        label Filter by Name
+      .form-group.small
+        a.secondary.button(href='#') Filter
+*/
+
 .form-groups
   &.inline
     margin-left: -25px
+    //margin-bottom: 0
     .form-group
       display: inline-block
       margin-left: 25px
-      margin-bottom: 0
+      //margin-bottom: 0
+      vertical-align: bottom
+      padding-top: 0
     {inputFields}
       width: auto
       min-width: 100px
-
+      margin-top: 15px
 
 fieldset
   border: 0
