@@ -7,11 +7,30 @@
   z-index 2
   overflow-y auto
   padding-left secondaryNavWidth + primaryNavWidth
-  &.plain
-    margin: 0 auto
-    padding: 20px
-    position: relative
+
+body.plain
+  background-color: primaryColor
+  background-image: linear-gradient(lighten(primaryColor, 10), primaryColor)
+  background-size: cover
+  background-repeat: no-repeat
+  padding: 0 15px
+  &:before
+    content: ''
+    display: block
+    padding-top: 10%
+  .site-body
+    @extend .card
+    @extend .fadeInDown
+    position: static
+    width: auto
+    height: auto
+    overflow: visible
+    padding: 30px 
     max-width: 600px
+    margin: 0 auto
+    margin-bottom: 15px
+    text-align: center
+    box-shadow: 0 0 50px rgba(black, 0.25)
 
 .site-body-inner
   padding: 25px
@@ -23,13 +42,3 @@
     padding-top: 25%
     @media palmBreakpoint
       padding-top: 0 
-
-.site-background
-  position: absolute
-  z-index: 1
-  left: 0
-  right: 0
-  top: 0
-  bottom: 0
-  width: 100%
-  height: 100%

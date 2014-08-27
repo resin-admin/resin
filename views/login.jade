@@ -6,26 +6,23 @@ html
 
     link(href='css/resin.css', rel='stylesheet')
     script(src='js/resin.min.js', type='text/javascript')
-  body
-    iframe.site-background(src='https://media.flixel.com/flixel/b4d2gnoijhtxu1j08dtg')
-    .site-body.plain
-      .plain-spacer
-      .padded.centered.card
-        img(src='img/logo.jpg')
-        form
-          .form-group
-            input(type='text', id='email', placeholder='jane@gmail.com')
-            label(for='email') Email
-          .form-group
-            input(type='password', id='password')
-            label(for='password') Password
+  body.plain
+    .site-body
+      img(src='img/logo.jpg')
+      form
+        .form-group
+          input(type='text', id='email', placeholder='jane@gmail.com')
+          label(for='email') Email
+        .form-group
+          input(type='password', id='password')
+          label(for='password') Password
 
-          .form-group
-            a.wide.button(href='/index.html') Login
+        .form-group
+          a.wide.button(href='/index.html') Login
 
-          .form-group
-            .grid
-              .grid__item.one-half.palm--one-whole.palm--spacer
-                a.link(href='#') What is this?
-              .grid__item.one-half.palm--one-whole
-                a.link(href='#') Forgot password?
+        .form-group
+          .grid
+            .grid__item.one-half.palm--one-whole.palm--spacer
+              a.link(href='#') What is this?
+            .grid__item.one-half.palm--one-whole
+              a.link(href='#') Forgot password?

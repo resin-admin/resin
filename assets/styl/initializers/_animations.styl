@@ -1,3 +1,4 @@
+// flipInX
 @keyframes flipInX
   0%
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
@@ -17,9 +18,22 @@
 
   100%
     transform: perspective(400px)
-
 .flipInX
   animation-duration: 1s
   animation-fill-mode: both
   backface-visibility: visible !important
   animation-name: flipInX
+
+
+// fadeInDown
+@keyframes fadeInDown
+  0%
+    opacity: 0
+    transform: translate3d(0, -5%, 0)
+  100%
+    opacity: 1
+    transform: none
+.fadeInDown
+  animation-duration: 1s
+  animation-fill-mode: both
+  animation-name: fadeInDown
