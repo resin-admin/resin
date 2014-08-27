@@ -1,14 +1,22 @@
 /*!!!
- * section: Spinner
- * example: <div class="spinner"></div>
- */
+section: Spinner
+description: To center a spinner within the site-body simply add the class `.centered` to the spinner like so `<div class="centered spinner"></div>`.
+jade: .spinner
+*/
 
 .spinner
+  @extend .fadeIn
   padding 30px
   display inline-block
   border-radius radius
   margin 0 auto
   background primaryColor
+  &.centered
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    margin-left: 150px 
   &:before
     content ''
     display block
@@ -24,6 +32,7 @@
     color white
     content 'loading...'
     display block
+    font-family 'Lato', sans-serif
     text-align center
     overflow hidden
     width 46px

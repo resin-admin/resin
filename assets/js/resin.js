@@ -19,8 +19,8 @@ $(document).ready(function(){
     var chart = new Chart(ctx).Bar(data, {});
   });
 
-  $('body').on('click', function(){
-    //$('.site-overlay').toggleClass('active')
+  $('.site-primary-nav .fa-question-circle, .site-overlay').on('click', function(){
+    $('.site-overlay').toggleClass('active')
   });
 
   // jquery-autosize plugin
