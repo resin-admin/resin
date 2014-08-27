@@ -1,28 +1,41 @@
 /*!!!
- * section: Table
- * example: |
- *   <table cellspacing='0'>
- *     <thead>
- *       <tr>
- *         <th>Name</th>
- *         <th>Email</th>
- *         <th>Actions</th>
- *       </tr>
- *     </thead>
- *     <tbody>
- *       <tr>
- *         <td>Jane Doe</td>
- *         <td>jane@gmail.com</td>
- *         <td>Edit</td>
- *       </tr>
- *       <tr>
- *         <td>John Smith</td>
- *         <td>John@gmail.com</td>
- *         <td>Edit</td>
- *       </tr>
- *     </tbody>
- *   </table>
- */
+section: Tables
+jade: |
+  .card.padded
+    table
+      thead
+        tr
+          th Title
+          th Status
+          th Actions
+      tbody
+        - for(var i=0; i<=4; i++)
+          tr(class="table-child table-child-#{i}")
+            td 
+              a.link(href="/edit.html") Splitting Hairs
+              br
+              small /splitting-hairs
+            td Published
+            td 
+              a.link(href="/edit.html") Edit
+        - for(var i=0; i<=2; i++)
+          tr(class="table-child table-child-4")
+            td 
+              a.link(href="/edit.html") Splitting Hairs
+              br
+              small /splitting-hairs
+            td Published
+            td 
+              a.link(href="/edit.html") Edit
+        tr(class="table-child table-child-3")
+          td 
+            a.link(href="/edit.html") Splitting Hairs
+            br
+            small /splitting-hairs
+          td Published
+          td 
+            a.link(href="/edit.html") Edit
+*/
 table
   width 100%
   text-align left
