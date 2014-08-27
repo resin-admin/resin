@@ -37,10 +37,12 @@ block content
             th Updated
             th Actions
         tbody
-          - for(var i=0; i<10; i++)
-            tr
+          - for(var i=0; i<=4; i++)
+            tr(class="table-child table-child-#{i}")
               td 
                 a.link(href="/edit.html") Splitting Hairs
+                br
+                small /splitting-hairs
               td How the haircutting industry has evolved
               td Published
               td Mark Appleby
@@ -48,3 +50,28 @@ block content
               td Today at 2:50 PM
               td 
                 a.link(href="/edit.html") Edit
+          - for(var i=0; i<=2; i++)
+            tr(class="table-child table-child-4")
+              td 
+                a.link(href="/edit.html") Splitting Hairs
+                br
+                small /splitting-hairs
+              td How the haircutting industry has evolved
+              td Published
+              td Mark Appleby
+              td Today at 2:50 PM
+              td Today at 2:50 PM
+              td 
+                a.link(href="/edit.html") Edit
+          tr(class="table-child table-child-3")
+            td 
+              a.link(href="/edit.html") Splitting Hairs
+              br
+              small /splitting-hairs
+            td How the haircutting industry has evolved
+            td Published
+            td Mark Appleby
+            td Today at 2:50 PM
+            td Today at 2:50 PM
+            td 
+              a.link(href="/edit.html") Edit

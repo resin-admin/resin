@@ -28,4 +28,35 @@ table
   text-align left
   td, th
     padding 15px 5px
-    border-bottom 1px solid #eee
+    border-bottom: 1px solid lightestGrey
+
+childIndent = 20px
+for child in (0..10)
+  .table-child-{child}
+    td:first-child
+      padding-left: childIndent * child
+      position: relative
+      &:before, &:after
+        position: absolute
+        content: ''
+        display: block
+        width: 2px
+        background: lighterGrey 
+        top: 0
+        bottom: 50%
+        left: childIndent * (child - 1) 
+      &:after
+        top: 50%
+        bottom: auto
+        height: 2px
+        width: 10px 
+    &+ .table-child-{child}
+      td:first-child
+        &:before
+          top: -50%
+
+
+.table-child-0
+  td:first-child
+    &:before, &:after
+      display: none
