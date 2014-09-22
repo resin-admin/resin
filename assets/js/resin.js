@@ -29,7 +29,22 @@ $(document).ready(function(){
   });   
 
   dropzoneStateToggle();
+  sticky();
 });
+
+function sticky(){
+  var target = $('.sticky');
+  var targetY = $('.sticky').offset().top;
+  $('.site-body').on('scroll', function(){
+    var scrollY = $('.site-body').scrollTop();
+    if(scrollY > targetY){
+      target.addClass('is-active');
+    }
+    else{
+      target.removeClass('is-active');
+    }
+  });
+}
 
 // http://stackoverflow.com/a/13542669/918060
 function shadeRGBColor(color, percent) {
