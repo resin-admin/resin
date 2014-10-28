@@ -34,16 +34,18 @@ $(document).ready(function(){
 
 function sticky(){
   var target = $('.sticky');
-  var targetY = $('.sticky').offset().top;
-  $('.site-body').on('scroll', function(){
-    var scrollY = $('.site-body').scrollTop();
-    if(scrollY > targetY){
-      target.addClass('is-active');
-    }
-    else{
-      target.removeClass('is-active');
-    }
-  });
+  if(target[0]){
+    var targetY = $('.sticky').offset().top;
+    $('.site-body').on('scroll', function(){
+      var scrollY = $('.site-body').scrollTop();
+      if(scrollY > targetY){
+        target.addClass('is-active');
+      }
+      else{
+        target.removeClass('is-active');
+      }
+    });
+  }
 }
 
 // http://stackoverflow.com/a/13542669/918060
