@@ -1,39 +1,39 @@
 /*!!!
 section: Tabs
 html: |
-  <ul class="tab-trigger">
-    <li class="active">Tab One</li>
+  <ul class="tabTrigger">
+    <li class="is-active">Tab One</li>
     <li>Tab Two</li>
     <li>Tab Three</li>
   </ul>
-  <ul class="tab-content">
-    <li class="active">Content One</li>
+  <ul class="tabContent">
+    <li class="is-active">Content One</li>
     <li>Content Two</li>
     <li>Content Three</li>
   </ul>
 */
 
-.tab-trigger
+.tabTrigger
   padding: 0
   margin: 0
   list-style-type: none
   clearfix()
   li
     float: left
-    border: 1px solid lighterGrey
-    background: lightestGrey
+    border: 1px solid lighter-grey
+    background: lightest-grey
     padding: 10px 25px
     cursor: pointer
     &:first-child
       border-top-left-radius: radius
     &:last-child
       border-top-right-radius: radius
-    &.active
+    &.is-active
       background: white
       cursor: default
       border-bottom-color: white
 
-.tab-content
+.tabContent
   padding: 0
   margin: 0
   list-style-type: none
@@ -41,10 +41,10 @@ html: |
   margin-bottom: 20px
   li
     display: none
-    border: 1px solid lighterGrey
+    border: 1px solid lighter-grey
     padding: 25px
     border-radius: radius
     border-top-left-radius: 0
-    &.active
+    &.is-active
       display: block
       background: white

@@ -1,6 +1,6 @@
 /*!!!
 section: Flash
-title: Flash (default)
+title: .flash
 jade: |
   .flash Hello, I'm the default flash message. <i class="flash-close fa fa-times"></i>
 */
@@ -9,13 +9,13 @@ jade: |
   padding: 15px
   background: blue
   border-radius: radius
-  background: noticeColor
+  background: notice-color
   color: white
   margin-bottom: 20px
   position: relative
   overflow: hidden
   .flash-close
-    color: noticeColor
+    color: notice-color
   
   &:before, &:after
     content: ''
@@ -30,47 +30,44 @@ jade: |
     top: auto
     bottom: 0
 
-  /*!!!
-  section: Flash
-  title: Success Flash
-  html: |
-    <div class="success flash">
-      Congratulations! I'm a success flash message.
-      <i class="flash-close fa fa-times"></i>
-    </div>
-  */
-  &.success
-    background: successColor 
-    .flash-close
-      color: successColor
+/*!!!
+section: Flash
+title: .flash--success
+jade: |
+  .flash.flash--success
+    | Congratulations! I'm a success flash message.
+    i.flash-close.fa.fa-times
+*/
+.flash--success
+  background: success-color 
+  .flash-close
+    color: success-color
 
-  /*!!!
-  section: Flash
-  title: Error Flash
-  html: |
-    <div class="error flash">
-      Uh-oh! I'm an error flash message.
-      <i class="flash-close fa fa-times"></i>
-    </div>
-  */
-  &.error
-    background: errorColor 
-    .flash-close
-      color: errorColor
+/*!!!
+section: Flash
+title: .flash--error
+jade: |
+  .flash.flash--error
+    | Uh-oh! I'm an error flash message.
+    i.flash-close.fa.fa-times
+*/
+.flash--error
+  background: error-color 
+  .flash-close
+    color: error-color
 
-  /*!!!
-  section: Flash
-  title: Warning Flash
-  html: |
-    <div class="warning flash">
-      Watch out! I'm a warning flash message.
-      <i class="flash-close fa fa-times"></i>
-    </div>
-  */
-  &.warning
-    background: warningColor 
-    .flash-close
-      color: warningColor
+/*!!!
+section: Flash
+title: .flash--warning
+jade: |
+  .flash.flash--warning
+    | Watch Out! I'm a warning flash message.
+    i.flash-close.fa.fa-times
+*/
+.flash--warning
+  background: warning-color 
+  .flash-close
+    color: warning-color
 
 .flash-close
   position: absolute

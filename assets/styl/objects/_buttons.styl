@@ -1,6 +1,6 @@
 /*!!!
 section: Buttons
-title: Button (default)
+title: .button
 jade: a.button(href='#') Button
 */
 .button
@@ -8,7 +8,7 @@ jade: a.button(href='#') Button
   display inline-block
   padding 10px
   text-decoration none
-  background primaryColor
+  background primary-color
   color white
   text-align center
   border-radius radius
@@ -16,17 +16,17 @@ jade: a.button(href='#') Button
   box-shadow 0 4px 4px rgba(black, 0.3)
   &:hover
     box-shadow 0 0 0 rgba(black, 0.0)
-    background darken(primaryColor, 3)
+    background darken(primary-color, 3)
   + .button
     margin-left: 12px
   i
     margin-right: 10px
   /*!!!
-  title: Secondary Button
   section: Buttons
+  title: .button--secondary
   jade: a.button.button--secondary(href='#') Secondary Button
   */
   &.button--secondary
     color: black
-    background: lighterGrey
-    border-bottom-color: lightGrey
+    background: lighter-grey
+    border-bottom-color: light-grey

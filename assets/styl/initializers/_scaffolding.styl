@@ -3,7 +3,10 @@ html, body
   padding: 0
   width: 100%
   height: 100%
-  display: table
+  background: grey-lighter
+
+[data-sr]
+  visibility: hidden
 
 // apply border-box to all the things
 *, *:before, *:after
@@ -13,6 +16,9 @@ html, body
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
   display: block
 
+img
+  max-width: 100%
+
 /*!!!
 section: Scaffolding
 title: .container
@@ -21,30 +27,60 @@ jade: .container lorem5
 */
 .container
   margin: 0 auto
-  max-width: 1024px
+  max-width: site-width 
+  padding: 0 16px
+  position: relative
 
-/*!!!
-section: Scaffolding
-title: .siteFooter & .siteBody
-description: The sticky footer is created using a [display:table trick based on this article](http://galengidman.com/2014/03/25/responsive-flexible-height-sticky-footers-in-css/), `.siteBody` is used to wrap everything inside of the body except for the footer which gets wrapped with `.siteFooter` as a sibling class.
-jade: |
-  body
-    .siteBody
-      header
-        | Hello I'm a header
-      section
-        | Hello I'm the main content
-    .siteFooter
-      footer
-        | Hello I'm a footer
-*/
-.siteFooter
-  display: table-row
-  height: 1px
+.siteWrapper
+  min-height: 100%
+  position: relative
+
+.siteHeader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 2
 
 .siteBody
-  height: 100%
-  display: table-row
+  padding-top: header-height + size[5]
+  padding-bottom: footer-height 
+
+.siteBody--white
+  background: white
+
+.siteBody-sidebar
+  width: sidebar-width
+  display: table-cell
+  @media breakpoints.portable.breakpoint
+    width: auto
+
+.sidebar
+  position: fixed
+  top: header-height 
+  width: sidebar-width 
+  bottom: footer-height 
+  overflow-y: auto
+  margin: 0
+  margin-left: size[6] * -1
+  @media breakpoints.portable.breakpoint
+    display: none
+
+.sidebar-footer
+  @media breakpoints.portable.breakpoint
+    display: none
+
+.siteBody-content
+  display: table-cell
+  @media breakpoints.portable.breakpoint
+    padding-left: 0
+    display: block
+
+.siteFooter
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
 
 /*!!!
 section: Scaffolding
@@ -100,6 +136,11 @@ for key, value in breakpoints
 +replicate('.grid--bottom')
   > *
     vertical-align: bottom
+
++replicate('.grid--center')
+  text-align: center
+  > *
+    text-align: left
 
 +replicate('.grid--rev')
   direction rtl
@@ -157,3 +198,15 @@ for key, value in breakpoints
     white-space: nowrap
     img
       max-width: none
+
++replicate('.combo--full')
+  > .combo-first
+    padding-right: 0
+  > .combo-last
+    padding-left: 0
+
++replicate('.combo--narrow')
+  > .combo-first
+    padding-right: (value.gutter / 4)
+  > .combo-last
+    padding-left: (value.gutter / 4)

@@ -1,4 +1,4 @@
-inputFields = "input[type='text'], input[type='password'], textarea, select, .form-cap"
+input-fields = "input[type='text'], input[type='password'], textarea, select, .form-cap"
 
 form, .form-groups
   margin-bottom: -25px
@@ -6,19 +6,15 @@ form, .form-groups
 /*!!!
 section: Forms
 title: Fieldset
-html: |
-  <form>
-    <fieldset>
-      <div class="form-group">
-        <input id="address" type="text" placeholder="123 Sunshine St." />
-        <label for="address">Address</label>
-      </div>
-      <div class="form-group">
-        <input id="postal" type="text" placeholder="L4C 1B2" />
-        <label for="postal">Postal Code</label>
-      </div>
-    </fieldset>
-  </form>
+jade: |
+  form
+    fieldset
+      .form-group
+        input#address(type="text", placeholder="123 Sunshine St.")
+        label(for="address") Address
+      .form-group
+        input#postal(type="text", placeholder="L4C 1B2")
+        label(for="postal") Postal Code
 */
 
 /*!!!
@@ -26,34 +22,32 @@ section: Forms
 title: Inline Forms
 jade: |
   .card
-    .form-groups.inline
-      .form-group.small
+    .form-groups.form-groups--inline
+      .form-group.form-group--small
         select
           option All Authors
           option Mark Appleby
           option Jane Doe
         label Filter by Author
-      .form-group.small
+      .form-group.form-group--small
         input(type='text', placeholder='Splitting Hairs')
         label Filter by Name
-      .form-group.small
+      .form-group.form-group--small
         a.secondary.button(href='#') Filter
 */
-
-.form-groups
-  &.inline
-    margin-left: -25px
+.form-groups--inline
+  margin-left: -25px
+  //margin-bottom: 0
+  .form-group
+    display: inline-block
+    margin-left: 25px
     //margin-bottom: 0
-    .form-group
-      display: inline-block
-      margin-left: 25px
-      //margin-bottom: 0
-      vertical-align: bottom
-      padding-top: 0
-    {inputFields}
-      width: auto
-      min-width: 100px
-      margin-top: 15px
+    vertical-align: bottom
+    padding-top: 0
+  {input-fields}
+    width: auto
+    min-width: 100px
+    margin-top: 15px
 
 fieldset
   border: 0
@@ -65,72 +59,67 @@ fieldset
 /*!!!
 section: Forms
 title: (Normal) Input Field
-html: |
-  <form>
-    <div class="form-group">
-      <input id="firstName" type="text" placeholder="Susan" />
-      <label for="firstName">First Name</label>
-    </div>
-  </form>
+jade: |
+  form
+    .form-group
+      input#firstName(type="text", placeholder="Susan")
+      label(for="firstName") First Name
 */
 .form-group
   display: block
   margin-bottom: 25px
   position: relative
   padding-top: 13px
-  /*!!!
-  section: Forms
-  title: Large Input Field
-  html: |
-    <form>
-      <div class="large form-group">
-        <input id="title" type="text" placeholder="The Lord of the Rings" />
-        <label for="title">Title</label>
-      </div>
-    </form>
-  */
-  &.large
-    {inputFields}
-      font-size: 3em
-  {inputFields}
-    font-size: 2em
-  /*!!!
-  section: Forms
-  title: Small Input Field
-  html: |
-    <form>
-      <div class="small form-group">
-        <input id="lastName" type="text" placeholder="Sanders" />
-        <label for="lastName">Last Name</label>
-      </div>
-    </form>
-  */
-  &.small
-    padding-top: 15px
-    {inputFields}
-      font-size: 1.3em
-  /*!!!
-  section: Forms
-  title: Error
-  html: |
-    <form>
-      <div class="form-group error">
-        <input id="age" type="text" placeholder="34" />
-        <label for="age">Age</label>
-        <div class="form-error">This field is required</div>
-      </div>
-    </form>
-  */
-  &.error
-    label
-      color: errorColor !important
-    {inputFields}
-      color: errorColor
-      border-bottom-color: errorColor
-      border-bottom-width: 2px
+
+/*!!!
+section: Forms
+title: Large Input Field
+jade: |
+  form
+    .form-group.form-group--large
+      input#title(type="text", placeholder="The Lord of the Rings")
+      label(for="title") Title
+*/
+.form-group--large
+  {input-fields}
+    font-size: 3em
+{input-fields}
+  font-size: 2em
+
+/*!!!
+section: Forms
+title: Small Input Field
+jade: |
+  form
+    .form-group.form-group--small
+      input#lastName(type="text", placeholder="Sanders")
+      label(for="lastName") Last Name
+*/
+.form-group--small
+  padding-top: 15px
+  {input-fields}
+    font-size: 1.3em
+
+/*!!!
+section: Forms
+title: Error
+jade: |
+  form
+    .form-group.form-group--error
+      input#age(type="text", placeholder="34")
+      label(for="age") Age
+      .form-error This field is required
+*/
+.form-group--error
+  label
+    color: errorColor !important
+  {input-fields}
+    color: errorColor
+    border-bottom-color: error-color
+    border-bottom-width: 2px
 
 .form-error
-  color: errorColor
+  color: error-color
   margin-top: 2px
   font-size: 12px
   font-weight: bold
@@ -143,7 +132,7 @@ label
   left: 0
   transition: color 0.2s ease-in-out
 
-{inputFields}
+{input-fields}
   display: block
   width: 100%
   border: 0
@@ -153,24 +142,22 @@ label
   resize: none
   background: transparent
   &:focus, &:hover
-    border-bottom-color: primaryColor
+    border-bottom-color: primary-color
     outline: none
     + label
-      color: primaryColor
+      color: primary-color
 
 /*!!!
 section: Forms
 title: Select
-html: |
-  <div class="form-group">
-    <select id="size">
-      <option>Select a size</option>
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-    </select>
-    <label for="size">Size</label>
-  </div>
+jade: |
+  .form-group
+    select#size
+      option Select a size
+      option Small
+      option Medium
+      option Large
+    label(for="size") Size
 */
 select
   border-radius: 0
@@ -189,27 +176,25 @@ select:-moz-focusring
   text-shadow: 0 0 0 #000
 
 ::-webkit-input-placeholder
-  color: lighterGrey
+  color: lighter-grey
 
 :-moz-placeholder
-  color: lighterGrey
+  color: lighter-grey
 
 ::-moz-placeholder
-  color: lighterGrey
+  color: lighter-grey
 
 :-ms-input-placeholder
-  color: lighterGrey
+  color: lighter-grey
 
 /*!!!
 section: Forms
 title: Textarea
-html: |
-  <div class="form-group">
-    <textarea id="description" placeholder="blonde hair and blue eyes"></textarea>
-    <label for="description">Description</label>
-  </div>
+jade: |
+  .form-group
+    textarea#description(placeholder="blonde hair and blue eyes")
+    label(for="description") Description
 */
-
 .form-cap
   padding-bottom: 2px
   &:hover

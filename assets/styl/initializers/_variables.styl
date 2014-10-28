@@ -17,6 +17,22 @@ secondary-nav-width = 200px
 
 /*!!!
 section: Variables
+title: Size
+description: |
+  - 0: 10px
+  - 1: 11px
+  - 2: 12px
+  - 3: 16px
+  - 4: 18px
+  - 5: 20px
+  - 6: 24px
+  - 7: 32px
+  - 8: 42px
+*/
+size = 10px 11px 12px 16px 18px 20px 24px 32px 42px
+
+/*!!!
+section: Variables
 title: Breakpoints
 description: |
   The following breakpoints are avaialbe:
@@ -48,12 +64,15 @@ jade: |
     .grid-2of3
       .guidedog Large
 */
+site-width = 1280px
+breakpoint-small = 600px
+breakpoint-large = 1024px
 breakpoints = {
-  large: {breakpoint: '(min-width: 481px)', gutter: size(2)},
-  desk: {breakpoint: '(min-width: 1024px)', gutter: size(3)},
-  lap: {breakpoint: '(min-width: 481px) and (max-width: 1023px)', gutter: size(2)},
-  portable: {breakpoint: '(max-width: 1023px)', gutter: size(2)},
-  palm: {breakpoint: '(max-width: 480px)', gutter: size(1)}
+  large: {breakpoint: s('(min-width: %s)', breakpoint-small + 1), gutter: 20px},
+  desk: {breakpoint: s('(min-width: %s)', breakpoint-large), gutter: 20px},
+  lap: {breakpoint: s('(min-width: %s) and (max-width: %s)', breakpoint-small + 1, breakpoint-large - 1), gutter: 20px},
+  portable: {breakpoint: s('(max-width: %s)', breakpoint-large - 1), gutter: 20px},
+  palm: {breakpoint: s('(max-width: %s)', breakpoint-small), gutter: 20px}
 }
 
 /*!!!
@@ -71,20 +90,20 @@ warning = #ec971f
 danger = #c9302c
 
 // main colours
-primaryColor = #01658F
-secondaryColor = #6FC162
+primary-color = #01658F
+secondary-color = #6FC162
 
 // greys
-lightestGrey = #f6f6f6
-lighterGrey = #dcdcdc
-lightGrey = #b2b2b2
+lightest-grey = #f6f6f6
+lighter-grey = #dcdcdc
+light-grey = #b2b2b2
 grey = #7F7F7F
-darkGrey = #5d5d5d
-darkerGrey = #333
-darkestGrey = #111
+dark-grey = #5d5d5d
+darker-grey = #333
+darkest-grey = #111
 
 // messaging colours
-noticeColor = #5BC0DE
-successColor = #5CB85C
-errorColor = #D9534F
-warningColor = #F0AD4E
+notice-color = #5BC0DE
+success-color = #5CB85C
+error-color = #D9534F
+warning-color = #F0AD4E

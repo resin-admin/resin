@@ -1,6 +1,6 @@
 /*!!!
 section: Spinner
-description: To center a spinner within the site-body simply add the class `.centered` to the spinner like so `<div class="centered spinner"></div>`.
+description: To center a spinner within the site-body simply add the class `.spinner--centered` to the spinner like so `<div class="spinner--centered spinner"></div>`.
 jade: .spinner
 */
 .spinner
@@ -9,13 +9,7 @@ jade: .spinner
   display inline-block
   border-radius radius
   margin 0 auto
-  background primaryColor
-  &.centered
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translateX(-50%) translateY(-50%)
-    margin-left: 150px 
+  background primary-color
   &:before
     content ''
     display block
@@ -36,6 +30,13 @@ jade: .spinner
     overflow hidden
     width 46px
     animation ellipses 2s infinite linear
+
+.spinner--centered
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  margin-left: 150px 
 
 @keyframes ellipses
   0%, 24%
