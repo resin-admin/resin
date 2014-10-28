@@ -4,7 +4,7 @@ block content
     h1 Edit Page
 
   .grid
-    .grid__item.two-thirds.portable--one-whole
+    .grid-2of3.grid-1-1--portable
 
       .form-group.large
         input(type='text', placeholder='Life on the Edge')
@@ -41,7 +41,7 @@ block content
 
 
         .grid.grid--wide.grid--bottom
-          .grid__item.two-thirds
+          .grid-2of3
             .form-groups
               .form-group
                 select
@@ -49,24 +49,24 @@ block content
                   option Popular
                   option On Sale
                 label Add an existing tag
-          .grid__item.one-third
+          .grid-1of3
             a.wide.secondary.button Add a new tag
 
         .spacer
         .grid.grid--wide.grid--bottom
-          .grid__item.two-thirds
+          .grid-2of3
             .form-groups
               .form-group
                 input(type='text', placeholder='modern')
                 label Add a new tag
-          .grid__item.one-third
+          .grid-1of3
             .grid.grid--narrow
-              .grid__item.one-half
+              .grid-1of2
                 a.wide.secondary.button Cancel
-              .grid__item.one-half
+              .grid-1of2
                 a.wide.button Add tag
 
-    .grid__item.one-third.portable--one-whole
+    .grid-1of3.grid-1of1--portable
       .sticky
         .card
           form
@@ -99,12 +99,12 @@ block content
                 option August 9th
               label Version
 
-        .grid.grid--narrow
-          .grid__item.one-half
+        .grid
+          .grid-1of2
             a.wide.secondary.button(href='#') 
               i.fa.fa-eye
               | Preview
-          .grid__item.one-half
+          .grid-1of2
             a.wide.button(href='#') 
               i.fa.fa-save
               | Save 
