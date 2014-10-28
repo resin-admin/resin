@@ -1,23 +1,22 @@
 /*!!!
-section: Card
-jade: |
-  .cards
-    .card Card
-    .card Card
-*/
-.cards
-  margin-bottom: -20px
-
+ * section: Card
+ * example: |
+ *   <div class="cards">
+ *     <div class="card">Card</div>
+ *     <div class="card">Card</div>
+ *   </div>
+ */
 .card
-  border 1px solid lighter-grey
+  border 1px solid lighterGrey
   padding 20px
   position relative
   border-radius radius
   margin-bottom: 20px
   background: white
-
-.card--padded
-  padding: 30px
-
-.card--centered
-  text-align: center
+  &.padded
+    padding: 30px
+  &.centered
+    text-align: center
+ 
+.cards
+  margin-bottom: -20px

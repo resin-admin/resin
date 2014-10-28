@@ -1,17 +1,18 @@
 /*!!!
-section: Notice
-jade: |
-  .card
-    .notice 52
-    | Card with notice
-*/
+ * section: Notice
+ * example: |
+ *   <div class="card">
+ *     <div class="notice">52</div>
+ *     Card with notice
+ *   </div>
+ */
 .notice
   box-shadow 0 2px 3px rgba(black, 0.1)
   transform scale(0)
   animation scaleIn 0.3s bounce
   animation-fill-mode forwards
-  background error-color 
-  border-bottom 2px solid darken(error-color, 10)
+  background errorColor 
+  border-bottom 2px solid darken(errorColor, 10)
   color white
   font-weight bold
   border-radius radius 

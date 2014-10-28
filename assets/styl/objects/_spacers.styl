@@ -1,0 +1,33 @@
+/*!!!
+ * title: Spacer (default)
+ * section: Spacers
+ * example: <div class="guidedog spacer">Spacer</div>
+ */
+.spacer
+  margin-bottom: 20px
+  
+/*!!!
+ * title: Palm Spacer
+ * section: Spacers
+ * description: Apply spacer only at palm breakpoint.
+ * example: <div class="guidedog palm--spacer">Palm Spacer</div>
+ */
+@media palmBreakpoint
+  .palm--spacer
+    margin-bottom: 20px
+
+@media lapBreakpoint
+  .lap--spacer
+    margin-bottom: 20px
+
+@media deskBreakpoint
+  .desk--spacer
+    margin-bottom: 20px
+
+@media portableBreakpoint
+  .portable--spacer
+    margin-bottom: 20px
+
+@media largeBreakpoint
+  .large--spacer
+    margin-bottom: 20px

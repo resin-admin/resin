@@ -1,0 +1,91 @@
+/*!!!
+ * title: Combo
+ * section: Helpers
+ * example: |
+ *   <div class="combo">
+ *     <div class='combo-first'>
+ *       <div class="card">Combo First</div>
+ *     </div>
+ *     <div class='combo-last'>
+ *       <div class="card">Combo Last</div>
+ *     </div>
+ *   </div>
+ */
+.combo
+  display table
+  width 100%
+  > .combo-first
+    width 0
+    white-space nowrap
+    > * 
+      width: auto
+    img
+      max-width none
+  > .combo-last
+    width 100%
+  
+.combo-first
+  display table-cell
+  padding-right 5px
+  vertical-align top
+
+.combo-last
+  display table-cell
+  padding-left 5px
+  vertical-align top
+   
+.combo-rev
+  > .combo-first
+    width 100%
+    white-space normal
+  > .combo-last
+    width 0
+    white-space nowrap
+    > * 
+      width: auto
+    img
+      max-width none
+
+.combo-middle
+  > *
+    vertical-align middle
+ 
+.combo-bottom
+  > *
+    vertical-align bottom
+
+.combo-auto
+  width auto
+  > .combo-first
+    width 0
+  > .combo-last
+    width auto
+  &.combo-rev
+    > .combo-first
+      width auto
+    > .combo-last
+      width 0
+
+.combo-narrow
+  > .combo-first
+    padding-right 2.5px
+  > .combo-last
+    padding-left 2.5px
+
+.combo-wide
+  > .combo-first
+    padding-right 10px
+  > .combo-last
+    padding-left 10px
+
+.combo-xwide
+  > .combo-first
+    padding-right 20px
+  > .combo-last
+    padding-left 20px
+
+.combo-full
+  > .combo-first
+    padding-right 0 
+  > .combo-last
+    padding-left 0

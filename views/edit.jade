@@ -1,10 +1,10 @@
 extends _layout
 block content
-  header.pageHeader 
+  header.page-header 
     h1 Edit Page
 
   .grid
-    .grid-2of3.grid-1-1--portable
+    .grid__item.two-thirds.portable--one-whole
 
       .form-group.large
         input(type='text', placeholder='Life on the Edge')
@@ -41,7 +41,7 @@ block content
 
 
         .grid.grid--wide.grid--bottom
-          .grid-2of3
+          .grid__item.two-thirds
             .form-groups
               .form-group
                 select
@@ -49,24 +49,24 @@ block content
                   option Popular
                   option On Sale
                 label Add an existing tag
-          .grid-1of3
-            a.wide.button--secondary.button Add a new tag
+          .grid__item.one-third
+            a.wide.secondary.button Add a new tag
 
         .spacer
         .grid.grid--wide.grid--bottom
-          .grid-2of3
+          .grid__item.two-thirds
             .form-groups
               .form-group
                 input(type='text', placeholder='modern')
                 label Add a new tag
-          .grid-1of3
+          .grid__item.one-third
             .grid.grid--narrow
-              .grid-1of2
-                a.wide.button--secondary.button Cancel
-              .grid-1of2
+              .grid__item.one-half
+                a.wide.secondary.button Cancel
+              .grid__item.one-half
                 a.wide.button Add tag
 
-    .grid-1of3.grid-1of1--portable
+    .grid__item.one-third.portable--one-whole
       .sticky
         .card
           form
@@ -99,12 +99,12 @@ block content
                 option August 9th
               label Version
 
-        .grid
-          .grid-1of2
-            a.wide.button--secondary.button(href='#') 
+        .grid.grid--narrow
+          .grid__item.one-half
+            a.wide.secondary.button(href='#') 
               i.fa.fa-eye
               | Preview
-          .grid-1of2
+          .grid__item.one-half
             a.wide.button(href='#') 
               i.fa.fa-save
               | Save 

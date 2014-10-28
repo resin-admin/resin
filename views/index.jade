@@ -1,44 +1,44 @@
 extends _layout
 block content
 
-  header.pageHeader
+  header.page-header
     h1 Overview
-  section.pageSection
+  section.page-section
     h2 Outstanding Tasks
     .grid
-      .grid-1of3
+      .grid__item.one-third
         .card
           .notice 52
           p
             strong 52
             | user's comments are pending approval.
           a.primary.button.wide(href='#') Approve Comments
-      .grid-1of3
+      .grid__item.one-third
         .card
           .notice 14
           p
             strong 14
             | sections of copy are missing translation.
           a.primary.button.wide(href='#') Add Translations
-  section.pageSection
+  section.page-section
     h2 Key Performance Indicators
     .grid
-      .grid-1of3
+      .grid__item.one-third
         .card
           h4 User Sign-ups
           .square
             canvas.chart(width='200', height='200')
-      .grid-1of3
+      .grid__item.one-third
         .card
           h4 Daily Page Views
           .square
             canvas.chart(width='200', height='200')
-      .grid-1of3
+      .grid__item.one-third
         .card
           h4 Daily Revenue
           .square
             canvas.chart(width='200', height='200')
-  section.pageSection
+  section.page-section
     h2 Blog Posts
     table(cellspacing='0')
       thead

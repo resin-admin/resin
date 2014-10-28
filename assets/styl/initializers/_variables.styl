@@ -1,109 +1,68 @@
-base-font-size = 16px
-grid-columns = 12
-
 /*!!!
-section: Variables
-title: Transitions
-description: |
-  `bounce` and `bounce-out` transitions are support.
-*/
+ * section: Colours
+ * swatches: [{name: primaryColor, value: "#01658F"}, {name: secondaryColor, value: "#6FC162"}, {name: lightestGrey, value: "#f6f6f6"}, {name: lighterGrey, value: "#dcdcdc"}, {name: lightGrey, value: '#b2b2b2'}, {name: grey, value: '#7F7F7F'}, {name: darkGrey, value: '#5d5d5d'}, {name: darkerGrey, value: '#333'}, {name: darkestGrey, value: '#111'}, {name: noticeColor, value: "#5BC0DE"}, {name: successColor, value: "#5CB85C"}, {name: errorColor, value: "#D9534F"}, {name: warningColor, value: "#F0AD4E"}]
+ */
+// main colours
+primaryColor = #01658F
+secondaryColor = #6FC162
+//primaryColor = black 
+//secondaryColor = black 
+
+// greys
+lightestGrey = #f6f6f6
+lighterGrey = #dcdcdc
+lightGrey = #b2b2b2
+grey = #7F7F7F
+darkGrey = #5d5d5d
+darkerGrey = #333
+darkestGrey = #111
+
+// messaging colours
+noticeColor = #5BC0DE
+successColor = #5CB85C
+errorColor = #D9534F
+warningColor = #F0AD4E
+
+// transitions
 bounce = cubic-bezier(0.145, 0.420, 0.425, 1.650)
-bounce-out = cubic-bezier(.5, -0.85, .73, .52)
+bounceOut = cubic-bezier(.5, -0.85, .73, .52)
 
 // other variables
 radius = 3px
-primary-nav-width = 100px
-secondary-nav-width = 200px
+primaryNavWidth = 100px
+secondaryNavWidth = 200px
+
+// clearfix helper
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both
 
 /*!!!
-section: Variables
-title: Size
-description: |
-  - 0: 10px
-  - 1: 11px
-  - 2: 12px
-  - 3: 16px
-  - 4: 18px
-  - 5: 20px
-  - 6: 24px
-  - 7: 32px
-  - 8: 42px
-*/
-size = 10px 11px 12px 16px 18px 20px 24px 32px 42px
-
-/*!!!
-section: Variables
-title: Breakpoints
-description: |
-  The following breakpoints are avaialbe:
-
-  - **Large**: `(min-width: 481px)`
-
-  - **Desk**: `(min-width: 1024px)`
-
-  - **Lap**: `(min-width: 481px)` and `(max-width: 1023px)`
-
-  - **Portable**: `(max-width: 1023px)`
-
-  - **Palm**: `(max-width: 480px)`
-jade: |
-  .grid.u-spacer2
-    .grid-1of3
-      .guidedog Palm
-    .grid-1of3
-      .guidedog Lap
-    .grid-1of3
-      .guidedog Desk
-
-  .grid.u-spacer2
-    .grid-2of3
-      .guidedog Portable
-
-  .grid
-    .grid-1of3
-    .grid-2of3
-      .guidedog Large
-*/
-site-width = 1280px
-breakpoint-small = 600px
-breakpoint-large = 1024px
-breakpoints = {
-  large: {breakpoint: s('(min-width: %s)', breakpoint-small + 1), gutter: 20px},
-  desk: {breakpoint: s('(min-width: %s)', breakpoint-large), gutter: 20px},
-  lap: {breakpoint: s('(min-width: %s) and (max-width: %s)', breakpoint-small + 1, breakpoint-large - 1), gutter: 20px},
-  portable: {breakpoint: s('(max-width: %s)', breakpoint-large - 1), gutter: 20px},
-  palm: {breakpoint: s('(max-width: %s)', breakpoint-small), gutter: 20px}
-}
-
-/*!!!
-section: Variables
-title: Colours
-description: |
-  Color variables are defined here
-swatches: [{name: dark-grey, value: "#cbcbcf"}, {name: medium-grey, value: "#e0e0e2"}, {name: light-grey, value: "#f7f7f8"}, {name: success, value: "#449d44"}, {name: warning, value: "#ec971f"}, {name: danger, value: "#c9302c"}]
+ * section: Grid
+ * description: The grid system used for Urban Adventures is a modified version of the [CSS Wizardry Grid](https://github.com/csswizardry/csswizardry-grids). The updated grid includes one additional breakpoint named "large".
+ * example: |
+ *   <div class="grid">
+ *     <div class="grid__item one-third"><div class="card">Palm</div></div>
+ *     <div class="grid__item one-third"><div class="card">Lap</div></div>
+ *     <div class="grid__item one-third"><div class="card">Desk</div></div>
+ *   </div>
+ *   <div class="grid">
+ *     <div class="grid__item two-thirds"><div class="card">Portable</div></div>
+ *   </div>
+ *   <div class="grid">
+ *     <div class="grid__item one-third"></div>
+ *     <div class="grid__item two-thirds"><div class="card">Large</div></div>
+ *   </div>
  */
-dark-grey = #cbcbcf
-medium-grey = #e0e0e2
-light-grey = #f7f7f8
-success = #449d44
-warning = #ec971f
-danger = #c9302c
 
-// main colours
-primary-color = #01658F
-secondary-color = #6FC162
-
-// greys
-lightest-grey = #f6f6f6
-lighter-grey = #dcdcdc
-light-grey = #b2b2b2
-grey = #7F7F7F
-dark-grey = #5d5d5d
-darker-grey = #333
-darkest-grey = #111
-
-// messaging colours
-notice-color = #5BC0DE
-success-color = #5CB85C
-error-color = #D9534F
-warning-color = #F0AD4E
+// breakpoints
+palmBreakpoint = "(max-width: 480px)"
+lapBreakpoint = "(min-width: 481px) and (max-width: 1023px)"
+deskBreakpoint = "(min-width: 1024px)"
+portableBreakpoint = "(max-width: 1023px)"
+largeBreakpoint = "(min-width: 481px)"
