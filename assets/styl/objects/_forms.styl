@@ -4,22 +4,22 @@ form, .form-groups
   margin-bottom: -25px
 
 /*!!!
- * section: Forms
- * title: Fieldset
- * example: |
- *   <form>
- *     <fieldset>
- *       <div class="form-group">
- *         <input id="address" type="text" placeholder="123 Sunshine St." />
- *         <label for="address">Address</label>
- *       </div>
- *       <div class="form-group">
- *         <input id="postal" type="text" placeholder="L4C 1B2" />
- *         <label for="postal">Postal Code</label>
- *       </div>
- *     </fieldset>
- *   </form>
- */
+section: Forms
+title: Fieldset
+html: |
+  <form>
+    <fieldset>
+      <div class="form-group">
+        <input id="address" type="text" placeholder="123 Sunshine St." />
+        <label for="address">Address</label>
+      </div>
+      <div class="form-group">
+        <input id="postal" type="text" placeholder="L4C 1B2" />
+        <label for="postal">Postal Code</label>
+      </div>
+    </fieldset>
+  </form>
+*/
 
 /*!!!
 section: Forms
@@ -63,64 +63,64 @@ fieldset
   margin-bottom: 25px
 
 /*!!!
- * section: Forms
- * title: (Normal) Input Field
- * example: |
- *   <form>
- *     <div class="form-group">
- *       <input id="firstName" type="text" placeholder="Susan" />
- *       <label for="firstName">First Name</label>
- *     </div>
- *   </form>
- */
+section: Forms
+title: (Normal) Input Field
+html: |
+  <form>
+    <div class="form-group">
+      <input id="firstName" type="text" placeholder="Susan" />
+      <label for="firstName">First Name</label>
+    </div>
+  </form>
+*/
 .form-group
   display: block
   margin-bottom: 25px
   position: relative
   padding-top: 13px
   /*!!!
-   * section: Forms
-   * title: Large Input Field
-   * example: |
-   *   <form>
-   *     <div class="large form-group">
-   *       <input id="title" type="text" placeholder="The Lord of the Rings" />
-   *       <label for="title">Title</label>
-   *     </div>
-   *   </form>
-   */
+  section: Forms
+  title: Large Input Field
+  html: |
+    <form>
+      <div class="large form-group">
+        <input id="title" type="text" placeholder="The Lord of the Rings" />
+        <label for="title">Title</label>
+      </div>
+    </form>
+  */
   &.large
     {inputFields}
       font-size: 3em
   {inputFields}
     font-size: 2em
   /*!!!
-   * section: Forms
-   * title: Small Input Field
-   * example: |
-   *   <form>
-   *     <div class="small form-group">
-   *       <input id="lastName" type="text" placeholder="Sanders" />
-   *       <label for="lastName">Last Name</label>
-   *     </div>
-   *   </form>
-   */
+  section: Forms
+  title: Small Input Field
+  html: |
+    <form>
+      <div class="small form-group">
+        <input id="lastName" type="text" placeholder="Sanders" />
+        <label for="lastName">Last Name</label>
+      </div>
+    </form>
+  */
   &.small
     padding-top: 15px
     {inputFields}
       font-size: 1.3em
   /*!!!
-   * section: Forms
-   * title: Error
-   * example: |
-   *   <form>
-   *     <div class="form-group error">
-   *       <input id="age" type="text" placeholder="34" />
-   *       <label for="age">Age</label>
-   *       <div class="form-error">This field is required</div>
-   *     </div>
-   *   </form>
-   */
+  section: Forms
+  title: Error
+  html: |
+    <form>
+      <div class="form-group error">
+        <input id="age" type="text" placeholder="34" />
+        <label for="age">Age</label>
+        <div class="form-error">This field is required</div>
+      </div>
+    </form>
+  */
   &.error
     label
       color: errorColor !important
@@ -159,19 +159,19 @@ label
       color: primaryColor
 
 /*!!!
- * section: Forms
- * title: Select
- * example: |
- *   <div class="form-group">
- *     <select id="size">
- *       <option>Select a size</option>
- *       <option>Small</option>
- *       <option>Medium</option>
- *       <option>Large</option>
- *     </select>
- *     <label for="size">Size</label>
- *   </div>
- */
+section: Forms
+title: Select
+html: |
+  <div class="form-group">
+    <select id="size">
+      <option>Select a size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+    <label for="size">Size</label>
+  </div>
+*/
 select
   border-radius: 0
   -moz-appearance: none
@@ -201,14 +201,14 @@ select:-moz-focusring
   color: lighterGrey
 
 /*!!!
- * section: Forms
- * title: Textarea
- * example: |
- *   <div class="form-group">
- *     <textarea id="description" placeholder="blonde hair and blue eyes"></textarea>
- *     <label for="description">Description</label>
- *   </div>
- */
+section: Forms
+title: Textarea
+html: |
+  <div class="form-group">
+    <textarea id="description" placeholder="blonde hair and blue eyes"></textarea>
+    <label for="description">Description</label>
+  </div>
+*/
 
 .form-cap
   padding-bottom: 2px

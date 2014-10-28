@@ -1,13 +1,12 @@
 /*!!!
- * section: Dropzone
- * description: A general asset upload area. Supports either drag & drop or the more traditional upload button (and corresponding file system navigation). Click the dropzone to cycle through its various states.
- * example: |
- *   <div class="dropzone">
- *     <div class="dropzone-icon"></div>
- *     <div class="dropzone-message">Drag and drop your file here or <a class="link" href="#">browse</a>.</div>
- *     <progress value="0" max="100"></progress>
- *   </div>
- */
+section: Dropzone
+description: A general asset upload area. Supports either drag & drop or the more traditional upload button (and corresponding file system navigation). Click the dropzone to cycle through its various states.
+jade: |
+  .dropzone
+    .dropzone-icon
+    .dropzone-message Drag and drop your file here or <a class="link" href="#">browse</a>.
+    progress(value="0", max="100")
+*/
 .dropzone
   border: 2px dashed primaryColor
   padding: 60px 30px
@@ -49,21 +48,17 @@
       display: block
 
   /*!!!
-   * section: Dropzone
-   * title: Uploaded State
-   * example: |
-   *   <div class="dropzone uploaded">
-   *     <div class="combo">
-   *       <div class="combo-first">
-   *         <img src="http://placehold.it/70x90" />
-   *       </div>
-   *       <div class="combo-last">
-   *         logo.png <small>(45kb)</small><br />
-   *         <small><a href="#" class="link">remove</a></small>
-   *       </div>
-   *     </div>
-   *   </div>
-   */
+  section: Dropzone
+  title: Uploaded State
+  jade: |
+    .dropzone.uploaded
+      .combo
+        .combo-first
+          img(src="http://placehold.it/70x90")
+        .combo-last
+          | logo.png <small>(45kb)</small><br />
+          small <a href="#" class="link">remove</a>
+  */
   &.uploaded
     text-align: left
     padding: 15px
@@ -101,4 +96,3 @@
     margin-left: -11px
     bottom: 12px
     color: white
-

@@ -1,13 +1,9 @@
 /*!!!
- * section: Flash
- * title: Flash (default)
- * example: |
- *   <div class="flash">
- *     Hello, I'm the default flash message.
- *     <i class="flash-close fa fa-times"></i>
- *   </div>
- */
-
+section: Flash
+title: Flash (default)
+jade: |
+  .flash Hello, I'm the default flash message. <i class="flash-close fa fa-times"></i>
+*/
 .flash
   @extend .flipInX
   padding: 15px
@@ -35,42 +31,42 @@
     bottom: 0
 
   /*!!!
-   * section: Flash
-   * title: Success Flash
-   * example: |
-   *   <div class="success flash">
-   *     Congratulations! I'm a success flash message.
-   *     <i class="flash-close fa fa-times"></i>
-   *   </div>
-   */
+  section: Flash
+  title: Success Flash
+  html: |
+    <div class="success flash">
+      Congratulations! I'm a success flash message.
+      <i class="flash-close fa fa-times"></i>
+    </div>
+  */
   &.success
     background: successColor 
     .flash-close
       color: successColor
 
   /*!!!
-   * section: Flash
-   * title: Error Flash
-   * example: |
-   *   <div class="error flash">
-   *     Uh-oh! I'm an error flash message.
-   *     <i class="flash-close fa fa-times"></i>
-   *   </div>
-   */
+  section: Flash
+  title: Error Flash
+  html: |
+    <div class="error flash">
+      Uh-oh! I'm an error flash message.
+      <i class="flash-close fa fa-times"></i>
+    </div>
+  */
   &.error
     background: errorColor 
     .flash-close
       color: errorColor
 
   /*!!!
-   * section: Flash
-   * title: Warning Flash
-   * example: |
-   *   <div class="warning flash">
-   *     Watch out! I'm a warning flash message.
-   *     <i class="flash-close fa fa-times"></i>
-   *   </div>
-   */
+  section: Flash
+  title: Warning Flash
+  html: |
+    <div class="warning flash">
+      Watch out! I'm a warning flash message.
+      <i class="flash-close fa fa-times"></i>
+    </div>
+  */
   &.warning
     background: warningColor 
     .flash-close
