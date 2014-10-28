@@ -5,6 +5,9 @@ jade: |
     .card Card
     .card Card
 */
+.cards
+  margin-bottom: -20px
+
 .card
   border 1px solid lighterGrey
   padding 20px
@@ -12,10 +15,9 @@ jade: |
   border-radius radius
   margin-bottom: 20px
   background: white
-  &.padded
-    padding: 30px
-  &.centered
-    text-align: center
- 
-.cards
-  margin-bottom: -20px
+
+.card--padded
+  padding: 30px
+
+.card--centered
+  text-align: center

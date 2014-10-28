@@ -32,7 +32,7 @@ jade: |
         transform: scale(1.6)
         bottom: 30px
         opacity: 0
-  &.uploading
+  &.is-uploading
     background-color: transparent
     background-image: none
     .dropzone-icon
@@ -51,7 +51,7 @@ jade: |
   section: Dropzone
   title: Uploaded State
   jade: |
-    .dropzone.uploaded
+    .dropzone.is-uploaded
       .combo
         .combo-first
           img(src="http://placehold.it/70x90")
@@ -59,7 +59,7 @@ jade: |
           | logo.png <small>(45kb)</small><br />
           small <a href="#" class="link">remove</a>
   */
-  &.uploaded
+  &.is-uploaded
     text-align: left
     padding: 15px
     border-style: solid

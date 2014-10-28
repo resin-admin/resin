@@ -1,9 +1,9 @@
 extends _layout
 block content
 
-  header.page-header
+  header.pageHeader
     h1 Overview
-  section.page-section
+  section.pageSection
     h2 Outstanding Tasks
     .grid
       .grid-1of3
@@ -20,7 +20,7 @@ block content
             strong 14
             | sections of copy are missing translation.
           a.primary.button.wide(href='#') Add Translations
-  section.page-section
+  section.pageSection
     h2 Key Performance Indicators
     .grid
       .grid-1of3
@@ -38,7 +38,7 @@ block content
           h4 Daily Revenue
           .square
             canvas.chart(width='200', height='200')
-  section.page-section
+  section.pageSection
     h2 Blog Posts
     table(cellspacing='0')
       thead
