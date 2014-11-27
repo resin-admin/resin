@@ -346,7 +346,7 @@ jade: |
   .form-group
     textarea#description(placeholder="blonde hair and blue eyes")
     label(for="description") Description
-*/.form-cap{padding-bottom:2px}.form-cap:hover{border-bottom-color:#7f7f7f}/*!!
+*/.form-cap{padding-bottom:2px}.form-cap:hover{border-bottom-color:#7f7f7f}textarea{border:1px solid #7f7f7f;height:165px;margin-top:5px;padding:10px}textarea:focus,textarea:hover{border-color:#01658f}/*!!
 section: Link
 jade: a.link(href="#") Link
 */a{color:#01658f}.link,.site-body a:not([class]){position:relative;text-decoration:none}.link:after,.link:before,.site-body a:not([class]):after,.site-body a:not([class]):before{content:'';position:absolute;bottom:-2px;left:0;height:2px;width:100%;background:#01658f;opacity:.2}.link:after,.site-body a:not([class]):after{opacity:1;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.link:hover:after,.site-body a:not([class]):hover:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}/*!!

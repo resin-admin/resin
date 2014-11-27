@@ -23,13 +23,9 @@ $(document).ready(function(){
     $('.site-overlay').toggleClass('active')
   });
 
-  // jquery-autosize plugin
-  $('textarea').autosize({
-    'append': ''
-  });   
-
   dropzoneStateToggle();
   sticky();
+  autogrow();
 });
 
 function sticky(){
