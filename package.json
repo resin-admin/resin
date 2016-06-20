@@ -1,6 +1,6 @@
 {
   "name": "Resin",
-  "version": "0.0.1",
+  "version": "0.0.14",
   "description": "Admin CSS foundation and HTML templates",
   "main": "index.html",
   "scripts": {
